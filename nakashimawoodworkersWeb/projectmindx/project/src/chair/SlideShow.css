@@ -1,0 +1,53 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css);
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.title{
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 5px;
+  font-weight: bold;
+  color: #636e72;
+  margin: 20px 0;
+}
+.slideshow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e9e7e6;
+}
+
+.slideshow img {
+  width: 50%;
+  height: auto;
+  /* margin: 0 20px; */
+}
+
+.slideshow__arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+  color: #636e72;
+  margin: 0 10px;
+  visibility: hidden;
+}
+.slideshow:hover .slideshow__arrow {
+  visibility: visible;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.slideshow__caption {
+  position: absolute;
+  right: 25%;
+  color: #b2bec3;
+  font-size: 15px;
+  margin: 10px 0;
+}
