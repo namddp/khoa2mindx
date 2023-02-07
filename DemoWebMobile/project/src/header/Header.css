@@ -29,8 +29,9 @@ nav {
 .header-title li {
   margin: 0 10px;
 }
+
 .header-title li:nth-child(-n+2) {
-  color: #d35400;
+  color: #FFBF5A;
 }
 .header-title a {
   text-decoration: none;
