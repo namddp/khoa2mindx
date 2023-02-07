@@ -8,11 +8,16 @@ const Header = () => {
         <div className="header-title">
           <img src="http://surl.li/etcty" alt="This is logo"></img>
          <ul>
-            <li>Hotline xxxxx</li>
-            <li>Miễn Phí Vận Chuyển Đơn Hàng Trên 1.000.000</li>
+            <li >Hotline: xxxxx</li>
+            <li><i>Miễn Phí Vận Chuyển Đơn Hàng Trên 1.000.000đ</i></li>
             <li><a href="#">Đăng Nhập</a> / <a href="#"> Đăng Kí</a></li>
+            <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-code-compare"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</a></li>
+
          </ul>
         </div>
+        <hr/>
         <ul className="header-menu">
           <li>
             <a href="#">Trang Chủ </a>
@@ -42,8 +47,10 @@ const Header = () => {
           </li>
           <li className="header-search">
             <form>
-              <input type="text" placeholder="Search..." />
-              <button type="submit">Go</button>
+              <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+              <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
             </form>
           </li>
         </ul>

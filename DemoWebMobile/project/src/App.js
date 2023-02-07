@@ -6,6 +6,7 @@ const App = () => {
   return (
     <div>
       <Header />
+      <hr/>
       {/* <div>
         <Routes>
           <Route path="/" element={<Home />} />
