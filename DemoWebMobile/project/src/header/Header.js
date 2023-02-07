@@ -23,10 +23,10 @@ const Header = () => {
             <a href="#">Trang Chủ </a>
           </li>
           <li>
-            <a href="#">Sản Phẩm</a>
+            <a href="#">Sản Phẩm <i className="fa-solid fa-chevron-down fa-2xs "></i></a>
           </li>
           <li>
-            <a href="#">Phụ Kiện</a>
+            <a href="#">Phụ Kiện <i className="fa-solid fa-chevron-down fa-2xs"></i></a>
           </li>
           <li>
             <a href="#">iPhone14</a>

@@ -49,7 +49,6 @@ nav {
   flex: 1;
   text-align: center;
 }
-
 .header-menu a {
   display: block;
   padding: 10px 0;
@@ -58,7 +57,7 @@ nav {
 }
 
 .header-menu a:hover {
-  background-color: lightgray;
+ color: #FFBF5A;
 }
 
 .header-search form {
