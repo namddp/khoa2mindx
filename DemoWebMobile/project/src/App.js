@@ -1,13 +1,11 @@
 import React from "react";
-import "../src/chair/SlideShow";
-import SlideShow from "../src/chair/SlideShow";
 import { Route, Routes } from "react-router-dom";
-import Home from "./products/Products";
+import Header from "./header/Header"
 
 const App = () => {
   return (
     <div>
-      <SlideShow />
+      <Header />
       {/* <div>
         <Routes>
           <Route path="/" element={<Home />} />
