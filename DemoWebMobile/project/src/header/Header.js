@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-
+import HeaderMenu from "./HeaderMenu" ;
 const Header = () => {
   return (
     <header>
@@ -18,34 +18,7 @@ const Header = () => {
          </ul>
         </div>
         <hr />
-        <ul className="header-menu">
-          <li>
-            <a href="#">Trang Chủ </a>
-          </li>
-          <li>
-            <a href="#">Sản Phẩm <i className="fa-solid fa-chevron-down fa-2xs "></i></a>
-          </li>
-          <li>
-            <a href="#">Phụ Kiện <i className="fa-solid fa-chevron-down fa-2xs"></i></a>
-          </li>
-          <li>
-            <a href="#">iPhone14</a>
-          </li>
-          <li>
-            <a href="#">Liên Hệ</a>
-          </li>
-          <li>
-            <a href="#">Giới Thiệu</a>
-          </li>
-          <li className="header-search">
-            <form>
-              <input type="text" placeholder="Tìm kiếm sản phẩm..." />
-              <button type="submit">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </form>
-          </li>
-        </ul>
+        <HeaderMenu/>
       </nav>
     </header>
   );

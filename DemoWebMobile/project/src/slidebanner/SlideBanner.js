@@ -5,12 +5,13 @@ const SlideBanner = () => {
   const [index, setIndex] = useState(0);
   const images = [
     {
-      src: "http://surl.li/etgzv",
-    },
-    {
       src: "http://surl.li/etgzz",
     },
+    {
+      src: "http://surl.li/etgzv",
+    },
   ];
+
   const handlePrevClick = () => {
     setIndex((index + images.length - 1) % images.length);
   };
