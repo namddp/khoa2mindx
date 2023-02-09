@@ -1,6 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from "react-router-dom";
+import DailyDeal from "./components/DailyDeal/DailyDeal";
 import Header from "./header/Header"
 import RunningText from "./header/RunningText"
 import Policy from "./policy/Policy";
@@ -13,6 +14,7 @@ const App = () => {
       <hr/>
       <SlideBanner/>
       <Policy/>
+      <DailyDeal/>
       {/* <div>
         <Routes>
           <Route path="/" element={<Home />} />
