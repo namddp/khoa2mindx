@@ -7,6 +7,7 @@ import RunningText from "./header/RunningText";
 import Policy from "./policy/Policy";
 import SlideBanner from "./slidebanner/SlideBanner";
 import ListIpads from "./components-ipad/list-ipad";
+import Footer from "./components/Footer/Footer";
 const App = () => {
   return (
     <div>
@@ -22,6 +23,7 @@ const App = () => {
         </Routes>
       </div> */}
       <ListIpads />
+      <Footer/>
     </div>
   );
 };
