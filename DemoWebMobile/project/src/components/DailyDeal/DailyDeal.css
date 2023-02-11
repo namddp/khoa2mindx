@@ -4,6 +4,7 @@
     box-sizing: border-box;
   }
 .dailyDeal{
+    margin-bottom: 50px !important;
     margin: auto;
     height: auto;
     width: 80vw;
@@ -16,28 +17,52 @@
     justify-content: space-between;
 }
 .dealItem{
+    height: 450px;
     display: flex !important;
     padding: 20px;
     border:10px solid #ffbf59;
     background-color: white;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 20px;
     border-radius: 15px;
+}
+.dealImg{
+    height: 200px;
+    width: 200px;
 }
 .dealItem img{
     border-radius: 15px;
+    padding: -20px;
     background-color: white;
+}
+.itemInfo{
+    height: auto;
+    width: 100%;
+    justify-content: center;
 }
 .itemImg{
     display: flex;
     flex-direction: row;
-    height: 30px;
+    height: 40px;
+    gap: 10px;
     margin-bottom: 20px;
 }
 
 .itemImg img{
     margin-top: 10px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 } 
+
+.productDealList{
+    gap: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+.productDealItem img{
+    width: 324px;
+    height: auto;
+    border-radius: 10px;
+}
