@@ -1,20 +1,29 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import {ProductsData} from "../../data/ProductsData";
 import "./SearchBar.css";
 
 function SearchBar() {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
   const [filteredData, setFilteredData] = useState(ProductsData);
 
   const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
+    setSearchTerm(e.target.value.toLowerCase());
+
+    
+  };
+  useEffect(() => {
+    console.log(filteredData)
     setFilteredData(
       ProductsData.filter((product) =>
-        product.name.toLowerCase().startsWith(searchTerm.toLowerCase())
-      )
-    );
-  };
-
+      {
+        if (searchTerm === '' || searchTerm === null) {
+          return [];
+      }
+      else {
+          return product.name.toLowerCase().includes(searchTerm)
+      }}));
+      console.log(filteredData)
+  }, [searchTerm]);
   return (
     <div>
       <li className="header-search">
@@ -22,8 +31,8 @@ function SearchBar() {
           <input
             type="text"
             placeholder="Tìm kiếm sản phẩm..."
-            value={searchTerm}
             onChange={handleSearch}
+            value={searchTerm}
           />
           <button type="submit">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -31,12 +40,14 @@ function SearchBar() {
         </form>
       </li>
       <ul className="product-list">
-        {filteredData.length > 0 ? (
+        {searchTerm.length > 0 ? (
           filteredData.map((product) => (
             <li className="product-frame" key={product.id}>
-              <img src={product.image} alt={product.name} />
-              <h3>{product.name}</h3>
-              <p>{product.price}</p>
+              <img src={product.image[0]} alt={product.name} />
+              <div>
+              <h5>{product.name}</h5>
+              <p>{product.ram_options[0].info[0].price}</p>
+              </div>
             </li>
           ))
         ) : searchTerm ? (
