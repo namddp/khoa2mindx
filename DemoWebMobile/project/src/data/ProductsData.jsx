@@ -6,26 +6,27 @@ export const ProductsData = [
         serial : 'AMOT001-7',
         brand : 'Apple',
         color : ['gray','white','golden'],
+        url : '',
         ram_options : [{
             ram : '8GB',
             info: [{
                 rom: "256GB",
-                price: 28990000,
+                price: "28,990,000₫",
             },{
                 rom: '512GB',
-                price: 34990000,
+                price: "34,990,000₫",
             }]
         },{
             ram : '16GB',
             info: [{
                 rom: '256GB',
-                price: 33999000,
+                price:  "33,999,000₫",
             },{
                 rom: '512GB',
-                price: 39999000,
+                price:  "39,999,000₫",
             },{
                 rom: '1TB',
-                price: 59999000,
+                price:  "59,999,000₫",
             }]
         }],
         image: ['https://product.hstatic.net/200000544803/product/10_e4b6175708414bdc8f4c1d152795f908_master.png',
@@ -40,23 +41,24 @@ export const ProductsData = [
         serial : 'AMOT001-8',
         brand : 'Apple',
         color : ['gray','white','golden'],
+        url : '',
         ram_options : [{
             ram : '8GB',
             info: [{
                 rom: "256GB",
-                price: 32990000,
+                price:"32,990,000₫" ,
             },{
                 rom: '512GB',
-                price: 39990000,
+                price: "39,990,000",
             }]
         },{
             ram : '16GB',
             info: [{
                 rom: '256GB',
-                price: 39490000,
+                price: "39,490,000₫",
             },{
                 rom: '512GB',
-                price: 49490000,
+                price: "49,490,000₫",
             }]
         }],
         image: ['https://product.hstatic.net/200000544803/product/6_1b78619eb90f4f96a1113bf7c9805638_master.png',
@@ -71,23 +73,24 @@ export const ProductsData = [
         serial : 'AMOT001-9',
         brand : 'Apple',
         color : ['gray','white'],
+        url : '',
         ram_options : [{
             ram : '8GB',
             info: [{
                 rom: "256GB",
-                price: 32000000,
+                price: "32,000,000₫",
             },{
                 rom: '512GB',
-                price: 33990000,
+                price: "33,990,000₫",
             }]
         },{
             ram : '16GB',
             info: [{
                 rom: '256GB',
-                price: 35999000,
+                price: "35,999,000₫",
             },{
                 rom: '512GB',
-                price: 42999000,
+                price:"42,999,000₫" ,
             }]
         }],
         image: ['https://product.hstatic.net/200000544803/product/6_ae4de0c675944598ae6553b33932574c_master.png',
@@ -100,16 +103,17 @@ export const ProductsData = [
         type: 'Iphone',
         name : 'iPhone 11',
         serial : 'AMOT002-1',
+        url : '',
         brand : 'Apple',
         color : ['gray','white','golden','black','magenta','purple'],
         ram_options : [{
             ram : '4GB',
             info: [{
                 rom: '64GB',
-                price: 18990000,
+                price: "18,990,000₫",
             },{
                 rom: '128GB',
-                price: 19990000,
+                price: "19,990,000₫",
             }]
         }],
         image: ['https://product.hstatic.net/200000544803/product/5_0cb452551d0743a6a430cc753c4b97e1_master.png',
@@ -124,17 +128,18 @@ export const ProductsData = [
         serial : 'AMOT002-74',
         brand : 'Apple',
         color : ['gray','white','golden','black','magenta','purple'],
+        url : '',
         ram_options : [{
             ram : '4GB',
             info: [{
                 rom: '64GB',
-                price: 22999000,
+                price: "18,990,000₫",
             },{
                 rom: '128GB',
-                price: 24999000,
+                price: "24,999,000₫",
             },{
                 rom: '256GB',
-                price: 28999000,
+                price: "28,999,000₫",
             }]
         }],
         image: ['https://product.hstatic.net/200000544803/product/6_74c8a72a363d459fbd7e54bd6731639b_master.png',
@@ -149,14 +154,15 @@ export const ProductsData = [
         serial : 'AMOT0041-72',
         brand : 'Apple',
         color : ['gray','white','golden'],
+        url : '',
         ram_options : [{
             ram : '8GB',
             info: [{
                 rom: "256GB",
-                price: 24990000,
+                price: "22,499,0000₫",
             },{
                 rom: '512GB',
-                price: 27990000,
+                price: "27,990,000₫",
             }]
         }]
         ,
@@ -172,14 +178,15 @@ export const ProductsData = [
         serial : 'AMOT041-412',
         brand : 'Apple',
         color : ['gray','white','golden','magenta','black','green'],
+        url : '',
         ram_options :[{
             ram : '8GB',
             info: [{
                 rom: "256GB",
-                price: 16990000,
+                price: "16,990,000₫",
             },{
                 rom: '512GB',
-                price: 20990000,
+                price: "20,990,000₫",
             }]
         }],
         image: ['https://product.hstatic.net/200000544803/product/2_a884f7f7c3464c1585ea11a83cb425a4_master.png',
@@ -194,11 +201,12 @@ export const ProductsData = [
         serial : 'AMOT0021-74',
         brand : 'Apple',
         color : ['gray','white','golden'],
+        url : '',
         ram_options : [{
             ram : '8GB',
             info: [{
                 rom: "64GB",
-                price: 17500000,
+                price:"17,500,000₫" ,
             }]
     }],
         image: ['https://product.hstatic.net/200000544803/product/d_c9a314402eb445ed91f296044aa8b90c_master.png',
@@ -213,14 +221,15 @@ export const ProductsData = [
         serial : 'AMOT00145-72',
         brand : 'Apple',
         color : ['gray','white'],
+        url : '',
         ram_options : [{
             ram : '8GB',
             info: [{
                 rom: "64GB",
-                price: 10990000,
+                price: "59,999,000₫",
             },{
                 rom: '256GB',
-                price: 13990000,
+                price: "13,990,000₫",
             }]
         }],
         image: ['https://product.hstatic.net/200000544803/product/2_f5e2c59e1b9e453aa078c1c640fe016f_master.png',
