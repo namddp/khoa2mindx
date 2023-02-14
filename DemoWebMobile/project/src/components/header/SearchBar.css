@@ -1,5 +1,4 @@
 .header-search {
-<<<<<<< HEAD
   display: flex;
   align-items: center;
   margin-left: 1rem;
@@ -53,49 +52,3 @@
   /* background-color: black; */
  
 }
-=======
-    display: flex;
-    align-items: center;
-    margin-left: 1rem;
-    justify-content: left;
-  }
-  .product-list {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-  }
-  
-  .product-frame {
-    display: flex !important;
-    background-color: white;
-    flex-flow: row nowrap;
-    width:  100%;
-    justify-content: center;
-    align-items: center;
-    margin: 2px;
-    border: 2px solid #ffc107;
-    border-radius: 10px;
-  }
-  
-  .product-frame img {
-    height: 50px;
-  }
-  
-  .product-frame h3 {
-    margin-top: 10px;
-    font-size: 18px;
-  }
-  
-  .product-frame p {
-    margin-top: 5px;
-    font-size: 14px;
-  }
-  .not-found {
-    font-size: 18px;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
->>>>>>> 80e90eabd4688c3447f47901e0739f24cbf05b58
