@@ -44,7 +44,9 @@ function SearchBar() {
                 <h3>
                   <a href={product.url}>{product.name}</a>
                 </h3>
+                {/* <hr/> */}
                 <p>{product.ram_options[0].info[0].price}</p>
+                <hr/>
               </li>
             ))
           ) : (

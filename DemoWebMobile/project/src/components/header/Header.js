@@ -14,7 +14,6 @@ const Header = () => {
             <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
             <li><a href="#"><i class="fa-solid fa-code-compare"></i></a></li>
             <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</a></li>
-
          </ul>
         </div>
         <hr />
