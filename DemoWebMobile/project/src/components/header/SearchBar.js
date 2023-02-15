@@ -15,15 +15,11 @@ function SearchBar() {
     console.log(filteredData)
     setFilteredData(
       ProductsData.filter((product) =>
-      {
-        if (searchTerm === '' || searchTerm === null) {
-          return [];
-      }
-      else {
-          return product.name.toLowerCase().includes(searchTerm)
-      }}));
-      console.log(filteredData)
-  }, [searchTerm]);
+        new RegExp(searchTerm, "i").test(product.name)
+      )
+    );
+  });
+
   return (
     <div>
       <li className="header-search">
@@ -40,19 +36,24 @@ function SearchBar() {
         </form>
       </li>
       <ul className="product-list">
-        {searchTerm.length > 0 ? (
-          filteredData.map((product) => (
-            <li className="product-frame" key={product.id}>
-              <img src={product.image[0]} alt={product.name} />
-              <div>
-              <h5>{product.name}</h5>
-              <p>{product.ram_options[0].info[0].price}</p>
-              </div>
-            </li>
-          ))
-        ) : searchTerm ? (
-          <p className="not-found">This item not found</p>
+        {searchTerm ? (
+          filteredData.length > 0 ? (
+            filteredData.map((product) => (
+              <li className="product-frame" key={product.id}>
+                <img src={product.image[0]} alt={product.name} />
+                <h3>
+                  <a href={product.url}>{product.name}</a>
+                </h3>
+                {/* <hr/> */}
+                <p>{product.ram_options[0].info[0].price}</p>
+                <hr/>
+              </li>
+            ))
+          ) : (
+            <p className="not-found">Không Tìm Thấy Sản Phẩm Liên Quan</p>
+          )
         ) : null}
+        
       </ul>
     </div>
   );

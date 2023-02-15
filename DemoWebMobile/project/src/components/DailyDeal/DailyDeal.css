@@ -1,86 +1,95 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-  }
-
-.dailyDeal{
-    margin-bottom: 50px !important;
-    margin: auto;
-    height: auto;
-    width: 80vw;
-    background-color:#ffbf59 ;
-} 
-
-.dealTitle{
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.dealItem{
-    height: 450px;
-    display: flex !important;
-    padding: 20px;
-    border:10px solid #ffbf59;
-    background-color: white;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    border-radius: 15px;
+.dailyDeal {
+  margin-bottom: 50px !important;
+  margin: auto;
+  height: auto;
+  width: 80vw;
+  background-color: #ffbf59;
 }
 
-.dealImg{
-    height: 200px;
-    width: 200px;
+.dealTitle {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  font-family: "Noto Serif", serif;
 }
 
-.dealItem img{
-    border-radius: 15px;
-    padding: -20px;
-    background-color: white;
+.dealItem {
+  height: 450px;
+  display: flex !important;
+  padding: 20px;
+  border: 10px solid #ffbf59;
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 15px;
 }
 
-.itemInfo{
-    height: auto;
-    width: 100%;
+.dealImg {
+  height: 200px;
+  width: 200px;
 }
 
-.itemInfo span{
-    text-decoration: line-through;
+.dealItem img {
+  border-radius: 15px;
+  padding: -20px;
+  background-color: white;
 }
 
-.itemImg{
-    display: flex;
-    flex-direction: row;
-    height: 40px;
-    gap: 10px;
-    margin-bottom: 20px;
+.itemInfo {
+  height: auto;
+  width: 100%;
 }
 
-.itemImg img{
-    margin-top: 10px;
-    width: 40px;
-    height: 40px;
-} 
-
-.productDealList{
-    gap: 20px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
+.itemInfo span {
+  text-decoration: line-through;
+}
+.itemInfo h4 {
+  font-size: 16px;
+  /* margin: 10px; */
+}
+.itemInfo h6 {
+  font-size: 16px;
+  color: red;
+}
+.itemImg {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  gap: 10px;
+  /* margin-bottom: 20px; */
 }
 
-.productDealItem img{
-    width: 324px;
-    height: auto;
-    border-radius: 10px;
+.itemImg img {
+  /* margin-top: 10px; */
+  width: 40px;
+  height: 40px;
 }
 
-.dealItem .action{
-    visibility: hidden;
+.productDealList {
+  gap: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
 }
-.dealItem:hover .action{
-    visibility: hidden;
-} 
+
+.productDealItem img {
+  width: 324px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.dealItem .action {
+  visibility: hidden;
+}
+.dealItem:hover .action {
+  visibility: hidden;
+}
