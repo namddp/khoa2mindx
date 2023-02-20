@@ -96,7 +96,7 @@ const DailyDeal = () => {
                 </div>
                 <div className='itemInfo'>
                   <h4>{e.name}</h4>
-                  <h6>{e.ram_options[0].info[0].price} VND<span>{e.ram_options[0].info[0].price * 0.1} VND</span></h6>
+                  <h6>{e.options[0].info[0].price} VND<span>{e.options[0].info[0].price * 0.1} VND</span></h6>
                 </div>
               </div>
             )

@@ -18,7 +18,7 @@ function SearchBar() {
         new RegExp(searchTerm, "i").test(product.name)
       )
     );
-  });
+  },[]);
 
   return (
     <div>
