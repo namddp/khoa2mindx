@@ -41,13 +41,13 @@ var settings = {
     ]
   };
 
-const DailyDeal = () => {
-  const [listItem, setListItem] = useState(ProductsData);
+const DailyDeal = (props) => {
+  const {products,setProducts} = props;
   const [isCountdownPaused, setIsCountdownPaused] = useState(false);
   useEffect(() => {
     const interval = setInterval(() => {
       if (!isCountdownPaused) {
-        setListItem(prevListItems => {
+        setProducts(prevListItems => {
           const newItems = Array.from({length: 8}, () => {
             return ProductsData[Math.floor(Math.random() * ProductsData.length)];
           });
@@ -60,7 +60,7 @@ const DailyDeal = () => {
   const handleCountdownPause = (isPaused) => {
     setIsCountdownPaused(isPaused);
     if (isPaused) {
-      setListItem(prevListItems => {
+      setProducts(prevListItems => {
         const newItems = Array.from({length: 8}, () => {
           return ProductsData[Math.floor(Math.random() * ProductsData.length)];
         });
@@ -76,7 +76,7 @@ const DailyDeal = () => {
           <h3><CountdownTimer onCountdownPause={handleCountdownPause} /></h3>
         </div>
         <Slider {...settings}>
-          {listItem.map(e => {
+          {products.map(e => {
             return (
               <div className='dealItem' key={e.id}>
                 <div className='dealImg'>
@@ -96,7 +96,7 @@ const DailyDeal = () => {
                 </div>
                 <div className='itemInfo'>
                   <h4>{e.name}</h4>
-                  <h6>{e.options[0].info[0].price} VND<span>{e.options[0].info[0].price * 0.1} VND</span></h6>
+                  <h6>{e.options[0].info[0].price * 0.9} VND<span>{e.options[0].info[0].price} VND</span></h6>
                 </div>
               </div>
             )

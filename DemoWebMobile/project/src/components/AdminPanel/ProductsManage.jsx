@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
 import { ProductsData } from '../../data/ProductsData';
 
-const ProductsManage = () => {
+const ProductsManage = (props) => {
+  const {products,setProducts} = props;
     const[name,setName] =  useState('');
     const[price,setPrice] =  useState('');
     const[image,setImage] =  useState('');
@@ -34,8 +35,8 @@ const ProductsManage = () => {
           };
         const handleEdit = (event) => {
             event.preventDefault();
-            ProductsData = ProductsData.filter(it => it.id !== id)
-            ProductsData = [...ProductsData,product]
+            setProducts(prev => prev.filter(it => it.id !== id))
+            setProducts(prev => [...prev,product])
         }
         setStatus(!status)
 return(
@@ -92,11 +93,12 @@ return(
             }],
             image: [image]
         };
-        ProductsData = [...ProductsData,productData]
+        setProducts(prev => [...prev,productData])
     }
     const handleDelete = (id) => {
-        ProductsData = ProductsData.filter(e => e.id !== id)
+        setProducts(prev => prev.filter(e => e.id !== id))
     }
+    console.log(products)
   return (
     <>
     <div className='add_products'>
@@ -126,7 +128,7 @@ return(
     </div>
     <div className='delete_products'>
         <ul className='list_item'>
-            {ProductsData.map(il => {
+            {products.map(il => {
                 return(
                     <li>
                         <img src="" alt="" />
@@ -140,7 +142,7 @@ return(
     </div>
     <div className='edit_products'>
     <ul className='list_item'>
-            {ProductsData.map(il => {
+            {products.map(il => {
                 return(
                     <li>
                         <img src="" alt="" />
