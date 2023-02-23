@@ -13,6 +13,7 @@ const App = () => {
   const [products, setProducts] = useState([]);
   const [checkItems, setCheckItems] = useState([]);
   const [careItems, setCareItems] = useState([]);
+
   useEffect(() => {
     fetch('https://63f3daa4864fb1d6001eedae.mockapi.io/api/products', {
   method: 'GET',
@@ -31,11 +32,12 @@ const App = () => {
   return (
     <div>
       <RunningText />
-      <Header />
+      <Header careItems={careItems} checkItems={checkItems}/>
       <hr />
       <SlideBanner />
       <Policy />
-      <DailyDeal products={products} setProducts={setProducts}/>
+      <DailyDeal products={products} checkItems={checkItems} setCareItems={setCareItems}
+      setProducts={setProducts} setCheckItems={setCheckItems} careItems={careItems}/>
       {/* <div>
         <Routes>
           <Route path="/" element={<Home />} />

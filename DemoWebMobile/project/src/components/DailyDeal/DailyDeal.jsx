@@ -8,7 +8,7 @@ var settings = {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
     // autoplay:true,
@@ -42,8 +42,9 @@ var settings = {
   };
 
 const DailyDeal = (props) => {
-  const {products,setProducts} = props;
+  const {products,setProducts,careItems,setCareItems,checkItems,setCheckItems} = props;
   const [isCountdownPaused, setIsCountdownPaused] = useState(false);
+
   useEffect(() => {
     const interval = setInterval(() => {
       if (!isCountdownPaused) {
@@ -57,6 +58,7 @@ const DailyDeal = (props) => {
     }, 60000);
     return () => clearInterval(interval);
   }, [isCountdownPaused]);
+
   const handleCountdownPause = (isPaused) => {
     setIsCountdownPaused(isPaused);
     if (isPaused) {
@@ -67,6 +69,15 @@ const DailyDeal = (props) => {
         return newItems;
       });
     }
+  }
+
+  const handleSelectLove = (id) => {
+        setCareItems(prev => [...prev,products[id]])
+        console.log(careItems)
+  }
+  const handleSelectCheck = (id) => {
+        setCheckItems(prev => [...prev,products[id]])
+        console.log(checkItems)
   }
   return (
     <>
@@ -83,9 +94,9 @@ const DailyDeal = (props) => {
                   <img src={e.image[0]} alt="" />
                 </div>
                 <div className='action'>
-                  <span>yêu thích</span>
-                  <span>xem</span>
-                  <span>so sánh</span>
+                  <span onClick={()=>handleSelectLove(e.id)}>L</span>
+                  <span >S</span>
+                  <span onClick={()=>handleSelectCheck(e.id)}>C</span>
                 </div>
                 <div className='itemImg'>
                   {e.image.map((i, index) => {

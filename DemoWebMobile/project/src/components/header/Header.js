@@ -1,7 +1,8 @@
 import React from "react";
 import "./Header.css";
 import HeaderMenu from "./HeaderMenu" ;
-const Header = () => {
+const Header = (props) => {
+  const {careItems,checkItems} = props;
   return (
     <header>
       <nav>
@@ -11,8 +12,8 @@ const Header = () => {
             <li >Hotline: xxxxx</li>
             <li><i>Miễn Phí Vận Chuyển Đơn Hàng Trên <b>1.000.000đ</b></i></li>
             <li><a href="#">Đăng Nhập</a>/ <a href="#"> Đăng Kí</a></li>
-            <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-code-compare"></i></a></li>
+            <li><a href="#"><i class="fa-regular fa-heart">{careItems.length}</i></a></li>
+            <li><a href="#"><i class="fa-solid fa-code-compare">{checkItems.length}</i></a></li>
             <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</a></li>
          </ul>
         </div>
