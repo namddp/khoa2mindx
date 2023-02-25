@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
-import { ProductsData } from '../../data/ProductsData'
+import { ProductsData } from '../../../data/ProductsData'
 import Slider from 'react-slick';
 import CountdownTimer from './CountdownTimer';
 import './DailyDeal.css';
