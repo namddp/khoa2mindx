@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import "./AllProducts.css"
+
+
 const AllProducts = () => {
   const [selectedOptions, setSelectedOptions] = useState({
     type: [],
@@ -20,7 +22,7 @@ const AllProducts = () => {
   };
 
   useEffect(() => {
-    fetch("https://63f3daa4864fb1d6001eedae.mockapi.io/api/products")
+    fetch("https://63f488d42213ed989c44ccc5.mockapi.io/products")
       .then((response) => response.json())
       .then((data) => setProductsData(data))
       .catch((error) => console.error(error));
@@ -129,11 +131,11 @@ const AllProducts = () => {
       <div className="all-product-display">
         <ul>
           {filteredProducts.map((product) => (
-            <li key={product.id}>
-              <img src={product.image[0]} alt={product.name} />
-              <h3 className="all-hover-name-product">{product.name}</h3>
+            <li key={product?.id}>
+              <img src={product?.image?.[0]} alt={product?.name} />
+              <h3 className="all-hover-name-product">{product?.name}</h3>
               <p className="">
-                {formatPrice(product.options[0].info[0].price)}
+                {formatPrice(product?.options?.[0].info?.[0]?.price)}
               </p>
             </li>
           ))}

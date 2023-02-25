@@ -5,7 +5,6 @@ import DailyDeal from "./DailyDeal/DailyDeal";
 import Policy from "./policy/Policy";
 import SlideBanner from "./slidebanner/SlideBanner";
 import ListIpads from "../../components-ipad/list-ipad";
-
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [checkItems, setCheckItems] = useState([]);
@@ -28,6 +27,7 @@ const Home = () => {
   }, []);
   return (
     <div>
+      
       <SlideBanner />
       <Policy />
       <DailyDeal

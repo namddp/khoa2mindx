@@ -14,6 +14,7 @@ const App = () => {
 
   return (
     <div>
+      
       <RunningText />
       <Header careItems={careItems} checkItems={checkItems} />
       <hr />
