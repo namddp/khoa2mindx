@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import "./AllProducts.css"
-import Sort from "./Sort";
 const AllProducts = () => {
   const [selectedOptions, setSelectedOptions] = useState({
     type: [],
@@ -64,8 +63,8 @@ const AllProducts = () => {
     new Set(productsData.flatMap((p) => (p.color ? p.color : [])))
   );
   return (
-    <div className="product-list">
-      <div className="filter">
+    <div className="all-product-list">
+      <div className="all-filter">  
         <h1>Danh sách </h1>
         <div>
           <h2>Thể Loại</h2>
@@ -76,6 +75,7 @@ const AllProducts = () => {
             onChange={handleCheckboxChange}
           />
           Macbook
+          <br/>
           <input
             type="checkbox"
             name="type"
@@ -83,12 +83,14 @@ const AllProducts = () => {
             onChange={handleCheckboxChange}
           />
           iPhone
+          <br/>
           <input
             type="checkbox"
             name="type"
             value="Ipad"
             onChange={handleCheckboxChange}
           />iPad
+          <br/>
           <input
             type="checkbox"
             name="type"
@@ -124,12 +126,12 @@ const AllProducts = () => {
         {/* <Sort /> */}
       </div>
 
-      <div className="product-display">
+      <div className="all-product-display">
         <ul>
           {filteredProducts.map((product) => (
             <li key={product.id}>
               <img src={product.image[0]} alt={product.name} />
-              <h3 className="hover-name-product">{product.name}</h3>
+              <h3 className="all-hover-name-product">{product.name}</h3>
               <p className="">
                 {formatPrice(product.options[0].info[0].price)}
               </p>
