@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import "./AllProducts.css"
-
+import "./AllProducts.css";
 
 const AllProducts = () => {
   const [selectedOptions, setSelectedOptions] = useState({
@@ -66,7 +65,7 @@ const AllProducts = () => {
   );
   return (
     <div className="all-product-list">
-      <div className="all-filter">  
+      <div className="all-filter">
         <h1>Danh sách </h1>
         <div>
           <h2>Thể Loại</h2>
@@ -77,7 +76,7 @@ const AllProducts = () => {
             onChange={handleCheckboxChange}
           />
           Macbook
-          <br/>
+          <br />
           <input
             type="checkbox"
             name="type"
@@ -85,14 +84,15 @@ const AllProducts = () => {
             onChange={handleCheckboxChange}
           />
           iPhone
-          <br/>
+          <br />
           <input
             type="checkbox"
             name="type"
             value="Ipad"
             onChange={handleCheckboxChange}
-          />iPad
-          <br/>
+          />
+          iPad
+          <br />
           <input
             type="checkbox"
             name="type"

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700,800, 800i, 900&display=swap');
 .all-product-list {
     display: flex;
     justify-content: center;
@@ -87,4 +88,5 @@
   .all-hover-name-product:hover{
     color: #FFBF5A;
   }
+  
   
