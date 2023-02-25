@@ -5,10 +5,9 @@ import DailyDeal from "./DailyDeal/DailyDeal";
 import Policy from "./policy/Policy";
 import SlideBanner from "./slidebanner/SlideBanner";
 import ListIpads from "../../components-ipad/list-ipad";
-const Home = () => {
-  const [products, setProducts] = useState([]);
-  const [checkItems, setCheckItems] = useState([]);
-  const [careItems, setCareItems] = useState([]);
+const Home = (props) => {
+  const {products, setProducts,checkItems, 
+    setCheckItems,careItems, setCareItems} = props
 
   useEffect(() => {
     fetch("https://63f3daa4864fb1d6001eedae.mockapi.io/api/products", {

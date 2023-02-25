@@ -11,19 +11,26 @@ const App = () => {
   const [products, setProducts] = useState([]);
   const [checkItems, setCheckItems] = useState([]);
   const [careItems, setCareItems] = useState([]);
-
+  
   return (
     <div>
-      
       <RunningText />
       <Header careItems={careItems} checkItems={checkItems} />
       <hr />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Sanpham" element={<AllProducts />} />
+      <Route path='/manage' element={<ProductsManage products={products} setProducts={setProducts} />}/>
+      <Route path="/" element={<Home products={products}
+        checkItems={checkItems}
+        setCareItems={setCareItems}
+        setProducts={setProducts}
+        setCheckItems={setCheckItems}
+        careItems={careItems} />} />
+      <Route path="/Sanpham" element={<AllProducts />} />
+        
       </Routes>
       <Footer />
-      <ProductsManage products={products} setProducts={setProducts} />
+      
+      
     </div>
   );
 };

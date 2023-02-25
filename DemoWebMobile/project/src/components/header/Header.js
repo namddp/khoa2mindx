@@ -33,6 +33,11 @@ const Header = (props) => {
               </a>
             </li>
             <li>
+              <Link to="/manage">
+                <i class="fa-solid fa-cart-shopping"></i>Manage
+              </Link>
+            </li>
+            <li>
               <a href="#">
                 <i class="fa-solid fa-cart-shopping"></i>Giỏ hàng
               </a>
