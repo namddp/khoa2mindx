@@ -17,7 +17,7 @@ const ProductsManage = (props) => {
         brand : '',
         color : ['gray','white','golden'],
         url : '',
-        ram_options : [{
+        options : [{
             ram : '8GB',
             info: [{
                 rom: "256GB",
@@ -84,7 +84,7 @@ return(
             brand : brand,
             color : ['gray','white','golden'],
             url : '',
-            ram_options : [{
+            options : [{
                 ram : '8GB',
                 info: [{
                     rom: "256GB",
