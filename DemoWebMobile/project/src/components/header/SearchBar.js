@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { ProductsData } from "../../data/ProductsData";
+import axios from "axios";
 import "./SearchBar.css";
-
 function SearchBar() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  const filtered = ProductsData.filter((p) =>
-    p.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
   const handleSearch = (e) => {
     setSearchTerm(e.target.value.toLowerCase());
   };
@@ -20,6 +19,23 @@ function SearchBar() {
 
     return f.format(price);
   };
+
+  useEffect(() => {
+    setIsLoading(true);
+    axios.get("https://63f488d42213ed989c44ccc5.mockapi.io/products")
+      .then(response => {
+        setIsLoading(false);
+        setProducts(response.data);
+      })
+      .catch(error => {
+        setIsLoading(false);
+        setError(error);
+      });
+  }, []);
+
+  let filteredProducts = products.filter((p) =>
+    p.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div>
@@ -37,9 +53,13 @@ function SearchBar() {
         </form>
       </li>
       <ul className="product-list">
-        {searchTerm ? (
-          !!filtered.length ? (
-            filtered.map((product) => (
+        {isLoading ? (
+          <p>Loading...</p>
+        ) : error ? (
+          <p>Error loading products. Please try again later.</p>
+        ) : searchTerm ? (
+          !!filteredProducts.length ? (
+            filteredProducts.map((product) => (
               <li className="product-frame" key={product.id}>
                 <img src={product.image[0]} alt={product.name} />
                 <h3>
