@@ -7,6 +7,7 @@ import RunningText from "./components/header/RunningText";
 import Footer from "./components/Footer/Footer";
 import AllProducts from "./components/ShowProducts/AllProducts/AllProducts";
 import ProductsManage from "./components/AdminPanel/ProductsManage";
+import DetailsProducts from "./components/ShowProducts/Details/DetailsProducts";
 const App = () => {
   const [products, setProducts] = useState([]);
   const [checkItems, setCheckItems] = useState([]);
@@ -21,6 +22,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Sanpham" element={<AllProducts />} />
+        <Route path="/Chitietsanpham" element={<DetailsProducts/>} />
       </Routes>
       <Footer />
       <ProductsManage products={products} setProducts={setProducts} />

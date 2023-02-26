@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import "./AllProducts.css";
 
 const AllProducts = () => {
@@ -7,8 +8,6 @@ const AllProducts = () => {
     brand: [],
     color: [],
   });
-  // console.log("selectedOptions", selectedOptions);
-
   const [productsData, setProductsData] = useState([]);
 
   const formatPrice = (price) => {
@@ -127,7 +126,7 @@ const AllProducts = () => {
         </div>
         {/* <Sort /> */}
       </div>
-
+      <Link to="/Chitietsanpham">
       <div className="all-product-display">
         <ul>
           {filteredProducts.map((product) => (
@@ -141,6 +140,8 @@ const AllProducts = () => {
           ))}
         </ul>
       </div>
+      </Link>
+    
     </div>
   );
 };
