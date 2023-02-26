@@ -1,13 +1,13 @@
 function iphone14New() {
   return (
     <div>
-      <div>
+      <div className="ml-[20px]">
         <h5>Trang chủ</h5>
       </div>
-      <div>
-        <h1>HÌNH ẢNH IPHONE 14</h1>
+      <div className="text-center mb-[20px] mt-[10px]">
+        <h1 className="font-bold text-4xl">HÌNH ẢNH IPHONE 14</h1>
       </div>
-      <div>
+      <div className="grid grid-cols-3 gap-5 mx-[200px]">
         <img src="https://file.hstatic.net/200000544803/file/iphone-1_d11f8928458740d799d1c4d0cd1d469a_grande.jpg" />
         <img src="https://file.hstatic.net/200000544803/file/iphone14_pro_1_cb97a8907951478e80d8589d28ef8f12_grande.jpeg" />
         <img src="https://file.hstatic.net/200000544803/file/iphone14_pro_2_1e230acec2d94aa7a9c37b98294ac15b_grande.jpeg" />
@@ -21,3 +21,5 @@ function iphone14New() {
     </div>
   );
 }
+
+export default iphone14New;
