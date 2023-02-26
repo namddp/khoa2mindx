@@ -19,7 +19,6 @@ const App = () => {
       <Header careItems={careItems} checkItems={checkItems} />
       <hr />
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/Sanpham" element={<AllProducts />} />
         <Route path="/Chitietsanpham" element={<DetailsProducts />} />
         <Route
