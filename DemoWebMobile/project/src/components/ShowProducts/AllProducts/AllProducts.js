@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "./AllProducts.css";
 
 const AllProducts = () => {
@@ -127,22 +127,20 @@ const AllProducts = () => {
         {/* <Sort /> */}
       </div>
       <Link to="/Chitietsanpham">
-        
-      <div className="all-product-display">
-        <ul>
-          {filteredProducts.map((product) => (
-            <li key={product?.id}>
-              <img src={product?.image?.[0]} alt={product?.name} />
-              <h3 className="all-hover-name-product">{product?.name}</h3>
-              <p className="">
-                {formatPrice(product?.options?.[0].info?.[0]?.price)}
-              </p>
-            </li>
-          ))}
-        </ul>
-      </div>
+        <div className="all-product-display">
+          <ul>
+            {filteredProducts.map((product) => (
+              <li key={product?.id}>
+                <img src={product?.image?.[0]} alt={product?.name} />
+                <h3 className="all-hover-name-product">{product?.name}</h3>
+                <p className="">
+                  {formatPrice(product?.options?.[0].info?.[0]?.price)}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </Link>
-    
     </div>
   );
 };

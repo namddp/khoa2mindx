@@ -48,6 +48,7 @@ const handleSelectCheck = (id) => {
         <Route path="/checkitems" element={<CheckItem checkItems={checkItems} setCheckItems={setCheckItems}/>} />
         <Route path="/careitems" element={<CareItems careItems={careItems} setCareItems={setCareItems}/>} />
         <Route path="/cart" element={<CareItems cartItems={cartItems} setCartItems={setCartItems}/>} />
+        <Route path="/Sanpham/:id" element={<DetailsProducts />} />
         <Route
           path="/manage"
           element={
