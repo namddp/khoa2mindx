@@ -40,13 +40,13 @@ const Header = (props) => {
               </Link>
             </li>
             <li>
-              <a href="#">
+            <Link to="/cart">
                 <i class="fa-solid fa-cart-shopping"></i>Giỏ hàng
-              </a>
+            </Link>
             </li>
           </ul>
         </div>
-        <hr />
+        <hr/>
         <HeaderMenu />
       </nav>
     </header>

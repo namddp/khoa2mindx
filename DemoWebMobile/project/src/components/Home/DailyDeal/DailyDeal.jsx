@@ -42,7 +42,7 @@ var settings = {
   };
 
 const DailyDeal = (props) => {
-  const {products,setProducts,careItems,setCareItems,checkItems,setCheckItems,handleSelectLove,handleSelectCheck} = props;
+  const {products,setProducts,handleSelectLove,handleSelectCheck} = props;
   const [isCountdownPaused, setIsCountdownPaused] = useState(false);
 
   useEffect(() => {
