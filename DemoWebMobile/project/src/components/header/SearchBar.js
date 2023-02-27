@@ -22,11 +22,17 @@ function SearchBar() {
 
   useEffect(() => {
     setIsLoading(true);
-    axios.get("https://63f488d42213ed989c44ccc5.mockapi.io/products")
-      .then(response => {
-        setIsLoading(false);
-        setProducts(response.data);
+    fetch('https://63f3daa4864fb1d6001eedae.mockapi.io/api/products', {
+        method: 'GET',
+       headers: {'content-type':'application/json'},
       })
+      .then(res => {
+        setIsLoading(false);
+        if (res.ok) {
+          return res.json();
+      }}
+      ).then(it => {setProducts(it)
+  })
       .catch(error => {
         setIsLoading(false);
         setError(error);

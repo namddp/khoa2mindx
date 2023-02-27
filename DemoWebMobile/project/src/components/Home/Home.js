@@ -7,7 +7,7 @@ import SlideBanner from "./slidebanner/SlideBanner";
 import ListIpads from "../../components-ipad/list-ipad";
 const Home = (props) => {
   const {products, setProducts,checkItems, 
-    setCheckItems,careItems, setCareItems} = props
+    setCheckItems,careItems, setCareItems,handleSelectCheck,handleSelectLove} = props
 
   useEffect(() => {
     fetch("https://63f3daa4864fb1d6001eedae.mockapi.io/api/products", {
@@ -36,6 +36,8 @@ const Home = (props) => {
         setProducts={setProducts}
         setCheckItems={setCheckItems}
         careItems={careItems}
+        handleSelectCheck={handleSelectCheck}
+              handleSelectLove={handleSelectLove}
       />
       <ListIpads />
     </div>

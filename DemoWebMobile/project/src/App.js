@@ -8,11 +8,33 @@ import Footer from "./components/Footer/Footer";
 import AllProducts from "./components/ShowProducts/AllProducts/AllProducts";
 import ProductsManage from "./components/AdminPanel/ProductsManage";
 import DetailsProducts from "./components/ShowProducts/Details/DetailsProducts";
+import CheckItem from "./components/CheckItem/CheckItem";
 const App = () => {
   const [products, setProducts] = useState([]);
   const [checkItems, setCheckItems] = useState([]);
   const [careItems, setCareItems] = useState([]);
-
+  useEffect(() => {
+    fetch('https://63f3daa4864fb1d6001eedae.mockapi.io/api/products', {
+  method: 'GET',
+  headers: {'content-type':'application/json'},
+})
+    .then(res => {
+      if (res.ok) {
+          return res.json();
+      }}
+    )
+    .then(it => {setProducts(it)
+          console.log(it)
+    })
+  }, []);
+  const handleSelectLove = (id) => {
+    setCareItems(prev => [...prev,products[id]])
+    console.log(careItems)
+}
+const handleSelectCheck = (id) => {
+    setCheckItems(prev => [...prev,products[id]])
+    console.log(checkItems)
+}
   return (
     <div>
       <RunningText />
@@ -21,6 +43,7 @@ const App = () => {
       <Routes>
         <Route path="/Sanpham" element={<AllProducts />} />
         <Route path="/Chitietsanpham" element={<DetailsProducts />} />
+        <Route path="/checkitems" element={<CheckItem checkItems={checkItems} setCheckItems={setCheckItems}/>} />
         <Route
           path="/manage"
           element={
@@ -31,7 +54,8 @@ const App = () => {
           path="/"
           element={
             <Home
-              products={products}
+              products={products} handleSelectCheck={handleSelectCheck}
+              handleSelectLove={handleSelectLove}
               checkItems={checkItems}
               setCareItems={setCareItems}
               setProducts={setProducts}

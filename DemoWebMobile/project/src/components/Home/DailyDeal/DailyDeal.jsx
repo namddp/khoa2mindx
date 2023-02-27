@@ -42,7 +42,7 @@ var settings = {
   };
 
 const DailyDeal = (props) => {
-  const {products,setProducts,careItems,setCareItems,checkItems,setCheckItems} = props;
+  const {products,setProducts,careItems,setCareItems,checkItems,setCheckItems,handleSelectLove,handleSelectCheck} = props;
   const [isCountdownPaused, setIsCountdownPaused] = useState(false);
 
   useEffect(() => {
@@ -50,8 +50,9 @@ const DailyDeal = (props) => {
       if (!isCountdownPaused) {
         setProducts(prevListItems => {
           const newItems = Array.from({length: 8}, () => {
-            return ProductsData[Math.floor(Math.random() * ProductsData.length)];
+            return products[Math.floor(Math.random() * products.length)];
           });
+          console.log(newItems);
           return newItems;
         });
       }
@@ -64,21 +65,16 @@ const DailyDeal = (props) => {
     if (isPaused) {
       setProducts(prevListItems => {
         const newItems = Array.from({length: 8}, () => {
-          return ProductsData[Math.floor(Math.random() * ProductsData.length)];
+          return products[Math.floor(Math.random() * products.length)];
         });
+        console.log(newItems);
         return newItems;
+        
       });
     }
   }
 
-  const handleSelectLove = (id) => {
-        setCareItems(prev => [...prev,products[id]])
-        console.log(careItems)
-  }
-  const handleSelectCheck = (id) => {
-        setCheckItems(prev => [...prev,products[id]])
-        console.log(checkItems)
-  }
+
   return (
     <>
        <div className='dailyDeal'>
@@ -94,9 +90,9 @@ const DailyDeal = (props) => {
                   <img src={e.image[0]} alt="" />
                 </div>
                 <div className='action'>
-                  <span onClick={()=>handleSelectLove(e.id)}>L</span>
-                  <span >S</span>
-                  <span onClick={()=>handleSelectCheck(e.id)}>C</span>
+                  <span onClick={()=>handleSelectLove(e.id)}>Thích</span>
+                  <span >Thêm Vào Giỏ</span>
+                  <span onClick={()=>handleSelectCheck(e.id)}>So Sánh</span>
                 </div>
                 <div className='itemImg'>
                   {e.image.map((i, index) => {

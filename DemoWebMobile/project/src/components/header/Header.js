@@ -4,6 +4,7 @@ import "./Header.css";
 import HeaderMenu from "./HeaderMenu";
 const Header = (props) => {
   const { careItems, checkItems } = props;
+  
   return (
     <header>
       <nav>
@@ -23,14 +24,15 @@ const Header = (props) => {
               <a href="#">Đăng Nhập</a>/ <a href="#"> Đăng Kí</a>
             </li>
             <li>
-              <a href="#">
+              <Link to="/careitems">
                 <i class="fa-regular fa-heart">{careItems.length}</i>
-              </a>
+                </Link>
+
             </li>
             <li>
-              <a href="#">
+            <Link to="/checkitems">
                 <i class="fa-solid fa-code-compare">{checkItems.length}</i>
-              </a>
+              </Link>
             </li>
             <li>
               <Link to="/manage">
