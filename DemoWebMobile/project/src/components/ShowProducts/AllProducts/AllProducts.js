@@ -127,6 +127,7 @@ const AllProducts = () => {
         {/* <Sort /> */}
       </div>
       <Link to="/Chitietsanpham">
+        
       <div className="all-product-display">
         <ul>
           {filteredProducts.map((product) => (
