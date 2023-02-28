@@ -1,8 +1,9 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect,useContext } from "react";
 import { ProductsData } from "../../../data/ProductsData";
 import Slider from "react-slick";
 import CountdownTimer from "./CountdownTimer";
+import { CartContext } from "../../Context/CartContext";
 import "./DailyDeal.css";
 var settings = {
   dots: true,
@@ -44,7 +45,7 @@ var settings = {
 const DailyDeal = (props) => {
   const { products, setProducts, handleSelectLove, handleSelectCheck } = props;
   const [isCountdownPaused, setIsCountdownPaused] = useState(false);
-
+  const { addToCart } = useContext(CartContext);
   useEffect(() => {
     const interval = setInterval(() => {
       if (!isCountdownPaused) {
@@ -83,16 +84,16 @@ const DailyDeal = (props) => {
           </h3>
         </div>
         <Slider {...settings}>
-          {products.map((e) => {
+          {products.map((e,index) => {
             return (
               <div className="dealItem" key={e.id}>
                 <div className="dealImg">
                   <img src={e.image[0]} alt="" />
                 </div>
                 <div className="action">
-                  <span onClick={() => handleSelectLove(e.id)}>Thích</span>
-                  <span>Thêm Vào Giỏ</span>
-                  <span onClick={() => handleSelectCheck(e.id)}>So Sánh</span>
+                  <button onClick={() => handleSelectLove(e.id)}>Thích</button>
+                  <button onClick={()=>addToCart(e,index)}>Thêm Vào Giỏ</button>
+                  <button onClick={() => handleSelectCheck(e.id)}>So Sánh</button>
                 </div>
                 <div className="itemImg">
                   {e.image.map((i, index) => {

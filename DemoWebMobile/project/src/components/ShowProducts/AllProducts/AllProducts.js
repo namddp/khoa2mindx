@@ -4,7 +4,7 @@ import "./AllProducts.css";
 import { BsPlus, BsEyeFill } from "react-icons/bs";
 import { ProductsData } from "../../../data/ProductsData";
 import { CartContext } from "../../Context/CartContext";
-const AllProducts = (AllProducts) => {
+const AllProducts = (props) => {
   const [selectedOptions, setSelectedOptions] = useState({
     type: [],
     brand: [],

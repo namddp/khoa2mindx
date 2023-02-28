@@ -18,6 +18,13 @@ const App = () => {
   const [checkItems, setCheckItems] = useState([]);
   const [careItems, setCareItems] = useState([]);
   const [cartItems, setCartItems] = useState([]);
+  const [productsData, setProductsData] = useState([]);
+  useEffect(() => {
+    fetch("https://63f488d42213ed989c44ccc5.mockapi.io/products")
+      .then((response) => response.json())
+      .then((data) => setProductsData(data))
+      .catch((error) => console.error(error));
+  }, []);
   useEffect(() => {
     fetch("https://63f3daa4864fb1d6001eedae.mockapi.io/api/products", {
       method: "GET",
@@ -48,7 +55,7 @@ const App = () => {
         <Header careItems={careItems} checkItems={checkItems} />
         <hr />
         <Routes>
-          <Route path="/Sanpham" element={<AllProducts />} />
+          <Route path="/Sanpham" element={<AllProducts productsData={productsData} setProductsData={setProductsData}/>} />
           <Route path="/sanpham/:id" element={<DetailsProducts />} />
           <Route
             path="/checkitems"
