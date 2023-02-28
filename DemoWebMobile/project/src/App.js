@@ -12,6 +12,7 @@ import CheckItem from "./components/CheckItem/CheckItem";
 import CareItems from "./components/CareItems/CareItems";
 import SidebarProvider from "./components/Context/SidebarContext";
 import Sidebar from "./components/ShowProducts/Slidebar/Sidebar";
+import Iphone14New from "./components/Home/iphone14/iphone14";
 const App = () => {
   const [products, setProducts] = useState([]);
   const [checkItems, setCheckItems] = useState([]);
@@ -92,10 +93,12 @@ const App = () => {
               />
             }
           />
+          <Route path="/iphone14new" element={<Iphone14New />} />
         </Routes>
+
         <Footer />
       </div>
-      <Sidebar/>
+      <Sidebar />
     </SidebarProvider>
   );
 };
