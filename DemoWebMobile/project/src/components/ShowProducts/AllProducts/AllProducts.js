@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./AllProducts.css";
+import { BsPlus, BsEyeFill } from "react-icons/bs";
+import { ProductsData } from "../../../data/ProductsData";
 
-const AllProducts = () => {
+const AllProducts = (AllProducts) => {
   const [selectedOptions, setSelectedOptions] = useState({
     type: [],
     brand: [],
@@ -48,10 +50,10 @@ const AllProducts = () => {
 
   const filteredProducts = productsData.filter((product) => {
     const { type, brand, color } = selectedOptions;
-    console.log({
-      color,
-      a: product.color,
-    });
+    // console.log({
+    //   color,
+    //   a: product.color,
+    // });
     return (
       (type.length === 0 || type.includes(product.type)) &&
       (brand.length === 0 || brand.includes(product.brand)) &&
@@ -126,21 +128,35 @@ const AllProducts = () => {
         </div>
         {/* <Sort /> */}
       </div>
-      <Link to="/Chitietsanpham">
-        <div className="all-product-display">
-          <ul>
-            {filteredProducts.map((product) => (
-              <li key={product?.id}>
-                <img src={product?.image?.[0]} alt={product?.name} />
-                <h3 className="all-hover-name-product">{product?.name}</h3>
-                <p className="">
-                  {formatPrice(product?.options?.[0].info?.[0]?.price)}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </Link>
+      <div className="all-product-display">
+        <ul>
+          {filteredProducts.map((product, index) => (
+            <li
+              className="border border-[#e4e4e4] h-[250px] mb-4 relative overflow-hidden group transition"
+              key={product?.id || index}
+            >
+              <div className="absolute top-6 -right-11 group-hover:right-5 p-2 flex flex-col items-center justify-center gap-y-2 transition-all duration-300 ">
+                <button>
+                  <div className="flex justify-center items-center text-white w-12 -h12 bg-red-500">
+                    <BsPlus className="text-3xl" />
+                  </div>
+                </button>
+                <Link
+                  to={`/sanpham/${index}`}
+                  className="w-12 h-12 bg-white flex justify-center items-center text-primary drop-shadow-xl"
+                >
+                  <BsEyeFill />
+                </Link>
+              </div>
+              <img src={product?.image?.[0]} alt={product?.name} />
+              <h3 className="all-hover-name-product">{product?.name}</h3>
+              <p className="">
+                {formatPrice(product?.options?.[0].info?.[0]?.price)}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

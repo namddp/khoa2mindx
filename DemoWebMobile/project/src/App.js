@@ -44,7 +44,7 @@ const handleSelectCheck = (id) => {
       <hr />
       <Routes>
         <Route path="/Sanpham" element={<AllProducts />} />
-        <Route path="/Chitietsanpham" element={<DetailsProducts />} />
+        <Route path="/sanpham/:id" element={<DetailsProducts/>} />
         <Route path="/checkitems" element={<CheckItem checkItems={checkItems} setCheckItems={setCheckItems}/>} />
         <Route path="/careitems" element={<CareItems careItems={careItems} setCareItems={setCareItems}/>} />
         <Route path="/cart" element={<CareItems cartItems={cartItems} setCartItems={setCartItems}/>} />
