@@ -37,7 +37,7 @@ const App = () => {
       })
       .then((it) => {
         setProducts(it);
-        console.log(it);
+        // console.log(it);
       });
   }, []);
   const handleSelectLove = (id) => {
@@ -50,61 +50,64 @@ const App = () => {
   };
   return (
     <SidebarProvider>
-      <div>
-        <RunningText />
-        <Header careItems={careItems} checkItems={checkItems} />
-        <hr />
-        <Routes>
-          <Route path="/Sanpham" element={<AllProducts productsData={productsData} setProductsData={setProductsData}/>} />
-          <Route path="/sanpham/:id" element={<DetailsProducts />} />
-          <Route
-            path="/checkitems"
-            element={
-              <CheckItem
-                checkItems={checkItems}
-                setCheckItems={setCheckItems}
-              />
-            }
-          />
-          <Route
-            path="/careitems"
-            element={
-              <CareItems careItems={careItems} setCareItems={setCareItems} />
-            }
-          />
-          <Route
-            path="/cart"
-            element={
-              <CareItems cartItems={cartItems} setCartItems={setCartItems} />
-            }
-          />
-          <Route path="/Sanpham/:id" element={<DetailsProducts />} />
-          <Route
-            path="/manage"
-            element={
-              <ProductsManage products={products} setProducts={setProducts} />
-            }
-          />
-          <Route
-            path="/"
-            element={
-              <Home
-                products={products}
-                handleSelectCheck={handleSelectCheck}
-                handleSelectLove={handleSelectLove}
-                checkItems={checkItems}
-                setCareItems={setCareItems}
-                setProducts={setProducts}
-                setCheckItems={setCheckItems}
-                careItems={careItems}
-              />
-            }
-          />
-          <Route path="/iphone14new" element={<Iphone14New />} />
-        </Routes>
+      <RunningText />
+      <Header careItems={careItems} checkItems={checkItems} />
+      <hr />
+      <Routes>
+        <Route
+          path="/Sanpham"
+          element={
+            <AllProducts
+              productsData={productsData}
+              setProductsData={setProductsData}
+            />
+          }
+        />
+        <Route path="/sanpham/:id" element={<DetailsProducts />} />
+        <Route
+          path="/checkitems"
+          element={
+            <CheckItem checkItems={checkItems} setCheckItems={setCheckItems} />
+          }
+        />
+        <Route
+          path="/careitems"
+          element={
+            <CareItems careItems={careItems} setCareItems={setCareItems} />
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <CareItems cartItems={cartItems} setCartItems={setCartItems} />
+          }
+        />
+        <Route path="/Sanpham/:id" element={<DetailsProducts />} />
+        <Route
+          path="/manage"
+          element={
+            <ProductsManage products={products} setProducts={setProducts} />
+          }
+        />
+        <Route
+          path="/"
+          element={
+            <Home
+              products={products}
+              handleSelectCheck={handleSelectCheck}
+              handleSelectLove={handleSelectLove}
+              checkItems={checkItems}
+              setCareItems={setCareItems}
+              setProducts={setProducts}
+              setCheckItems={setCheckItems}
+              careItems={careItems}
+            />
+          }
+        />
+        <Route path="/iphone14new" element={<Iphone14New />} />
+      </Routes>
+      <Footer />
 
-        <Footer />
-      </div>
       <Sidebar />
     </SidebarProvider>
   );

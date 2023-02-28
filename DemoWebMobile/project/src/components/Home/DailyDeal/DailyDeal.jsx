@@ -53,7 +53,7 @@ const DailyDeal = (props) => {
           const newItems = Array.from({ length: 8 }, () => {
             return products[Math.floor(Math.random() * products.length)];
           });
-          console.log(newItems);
+          // console.log(newItems);
           return newItems;
         });
       }
@@ -68,7 +68,7 @@ const DailyDeal = (props) => {
         const newItems = Array.from({ length: 8 }, () => {
           return products[Math.floor(Math.random() * products.length)];
         });
-        console.log(newItems);
+        // console.log(newItems);
         return newItems;
       });
     }

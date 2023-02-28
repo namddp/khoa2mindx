@@ -3,12 +3,19 @@ import { Link } from "react-router-dom";
 import { IoMdArrowForward } from "react-icons/io";
 import { FiTrash2 } from "react-icons/fi";
 import { SidebarContext } from "../../Context/SidebarContext";
-import {CartContext} from "../../Context/CartContext";
+import { CartContext } from "../../Context/CartContext";
 import CartItem from "../../CartItem/CartItem";
+const formatPrice = (price) => {
+  const f = new Intl.NumberFormat("vi-vn", {
+    style: "currency",
+    currency: "VND",
+  });
 
+  return f.format(price);
+};
 const Sidebar = () => {
   const { isOpen, setIsOpen, handleClose } = useContext(SidebarContext);
- const {cart} = useContext(CartContext);
+  const { cart, clearCart, total } = useContext(CartContext);
   return (
     <div
       className={`${
@@ -17,14 +24,32 @@ const Sidebar = () => {
     >
       <div className="flex items-center justify-between py-6 border-b">
         <div className="uppercase text-sm font-semibold"> Shopping Bag(0) </div>
-        <div onClick={handleClose} className=" cursor-pointer w-8 h-8 flex justify-center items-center">
-          <IoMdArrowForward className="text-2xl"/>
+        <div
+          onClick={handleClose}
+          className=" cursor-pointer w-8 h-8 flex justify-center items-center"
+        >
+          <IoMdArrowForward className="text-2xl" />
         </div>
       </div>
-      <div> 
-        {cart.map(item=>{
-        return <CartItem item ={item} key= {item.id}/>
-      })}</div>
+      <div className="flex flex-col gap-y-2 h-[520px] lg:h-[400px] overflow-y-auto overflow-x-hidden border-b">
+        {cart.map((item) => {
+          return <CartItem item={item} key={item.id} />;
+        })}
+      </div>
+      <div className=" flex flex-col gap-y-3 py-4 mt-4 ">
+        <div className="flex w-full justify-between items-center">
+          <div className="uppercase font-semibold">
+            <span className="mr-2">Tổng Cộng:</span>
+            {formatPrice(total)}
+          </div>
+          <div
+            onClick={clearCart}
+            className="cursor-pointer py-4 bg-red-500 text-white w-12 h-12 flex justify-center items-center text-xl"
+          >
+            <FiTrash2 />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -180,7 +180,7 @@ function ListAccessories() {
   );
 }
 function ListiPhone(props) {
-  console.log("AA", props);
+  // console.log("AA", props);
   return (
     <div className="listIphone-container w-[265px] h-[450px] border-solid border-[1px] rounded-[20px] text-center ml-[10px] p-[5px] shadow-xl hover:shadow-gray-500">
       <div className="text-center h-[265px] w-[265px]">
@@ -219,7 +219,7 @@ function ListiPhones() {
   return (
     <div className="flex justify-center gap-[1px]">
       {dataiPhone.map((item, index) => {
-        console.log("item", item);
+        // console.log("item", item);
         return (
           <ListiPhone
             key={index}

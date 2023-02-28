@@ -1,13 +1,38 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import HeaderMenu from "./HeaderMenu";
 import { SidebarContext } from "../Context/SidebarContext";
+import { CartContext } from "../Context/CartContext";
 const Header = (props) => {
   const { careItems, checkItems } = props;
   const { isOpen, setIsOpen } = useContext(SidebarContext);
+  const { itemAmount } = useContext(CartContext);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+
+  useEffect(() => {
+    let prevScrollPosition = window.pageYOffset;
+    const handleScroll = () => {
+      const currentScrollPosition = window.pageYOffset;
+      setIsHeaderVisible(
+        currentScrollPosition < 200 ||
+          currentScrollPosition <= prevScrollPosition
+      );
+      prevScrollPosition = currentScrollPosition;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <header>
+    <header
+      className={`${
+        isHeaderVisible ? "visible" : "hidden"
+      } fixed bg-white w-full z-20 transition-all duration-300 `}
+    >
       <nav>
         <div className="header-title">
           <Link to="/">
@@ -41,8 +66,16 @@ const Header = (props) => {
             </li>
 
             <li>
-              <Link onClick={() => setIsOpen(!isOpen)}>
-                <i class="fa-solid fa-cart-shopping"></i>Giỏ hàng
+              <Link
+                className="cursor-pointer flex relative max-w-[100px]"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                <div>
+                  <i class="fa-solid fa-cart-shopping"></i>Giỏ hàng
+                </div>
+                <div className="bg-red-500 absolute left-3 -top-3 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center">
+                  {itemAmount}
+                </div>
               </Link>
             </li>
           </ul>

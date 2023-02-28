@@ -1,7 +1,7 @@
 import React from "react";
 function Iphone14New() {
   return (
-    <div>
+    <div className="py-48">
       <div className="ml-[20px]">
         <h5>Trang chủ</h5>
       </div>
