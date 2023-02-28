@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import "./AllProducts.css";
 import { BsPlus, BsEyeFill } from "react-icons/bs";
 import { ProductsData } from "../../../data/ProductsData";
-
+import { CartContext } from "../../Context/CartContext";
 const AllProducts = (AllProducts) => {
   const [selectedOptions, setSelectedOptions] = useState({
     type: [],
@@ -64,6 +64,7 @@ const AllProducts = (AllProducts) => {
   const colors = Array.from(
     new Set(productsData.flatMap((p) => (p.color ? p.color : [])))
   );
+  const { addToCart } = useContext(CartContext);
   return (
     <div className="all-product-list">
       <div className="all-filter">
@@ -136,11 +137,11 @@ const AllProducts = (AllProducts) => {
               key={product?.id || index}
             >
               <div className="absolute top-6 -right-11 group-hover:right-5 p-2 flex flex-col items-center justify-center gap-y-2 group-hover:opacity-100 transition-all duration-300 ">
-                <button>
-                  <div className="flex justify-center items-center text-white w-12 -h12 bg-red-500">
-                    <BsPlus className="text-3xl" />
-                  </div>
-                </button>
+                  <button onClick={()=>addToCart(product,index)}>
+                    <div className="flex justify-center items-center text-white w-12 -h12 bg-red-500">
+                      <BsPlus className="text-3xl" />
+                    </div>
+                  </button>
                 <Link
                   to={`/sanpham/${index}`}
                   className="w-12 h-12 bg-white flex justify-center items-center text-primary drop-shadow-xl"
