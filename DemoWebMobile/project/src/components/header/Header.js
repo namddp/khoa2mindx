@@ -1,10 +1,11 @@
-import React from "react";
+import React,{useContext}from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import HeaderMenu from "./HeaderMenu";
+import { SidebarContext } from "../Context/SidebarContext";
 const Header = (props) => {
   const { careItems, checkItems } = props;
-  
+  const {isOpen, setIsOpen} = useContext (SidebarContext);
   return (
     <header>
       <nav>
@@ -26,11 +27,10 @@ const Header = (props) => {
             <li>
               <Link to="/careitems">
                 <i class="fa-regular fa-heart">{careItems.length}</i>
-                </Link>
-
+              </Link>
             </li>
             <li>
-            <Link to="/checkitems">
+              <Link to="/checkitems">
                 <i class="fa-solid fa-code-compare">{checkItems.length}</i>
               </Link>
             </li>
@@ -39,14 +39,18 @@ const Header = (props) => {
                 <i class="fa-solid fa-cart-shopping"></i>Manage
               </Link>
             </li>
+
             <li>
-            <Link to="/cart">
+              <Link to="/cart">
                 <i class="fa-solid fa-cart-shopping"></i>Giỏ hàng
-            </Link>
+              </Link>
+            </li>
+            <li onClick={()=>setIsOpen(!isOpen)}>
+              open / close 
             </li>
           </ul>
         </div>
-        <hr/>
+        <hr />
         <HeaderMenu />
       </nav>
     </header>

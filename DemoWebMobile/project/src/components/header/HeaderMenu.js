@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./HeaderMenu.css";
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
+import { SidebarContext } from "../Context/SidebarContext"; 
 const HeaderMenu = () => {
   const [dropdown1, setDropdown1] = useState(false);
   const [dropdown2, setDropdown2] = useState(false);
   const [dropdown3, setDropdown3] = useState(false);
   const [dropdown4, setDropdown4] = useState(false);
-
   const handleDropdownEnter = (setDropdown) => () => setDropdown(true);
   const handleDropdownLeave = (setDropdown) => () => setDropdown(false);
   return (
