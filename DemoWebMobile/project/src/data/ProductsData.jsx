@@ -440,7 +440,21 @@ export const ProductsData = [
     brand: "Apple",
     color: ["gray", "sliver"],
     size: ["42mm"],
-    gia: 6990000,
+    ram_options: [
+      {
+        ram: "",
+        info: [
+          {
+            rom: "",
+            price: 6990000,
+          },
+          {
+            rom: "",
+            price: "",
+          },
+        ],
+      },
+    ],
     image: [
       "https://product.hstatic.net/200000544803/product/2_2ce338f3ae6c4fc1a21733773d52324d_master.png",
       "https://product.hstatic.net/200000544803/product/1_c8513dfd8368450c911385dfd81144a6_master.png",
@@ -456,7 +470,21 @@ export const ProductsData = [
     brand: "Apple",
     color: ["gray", "sliver"],
     size: ["40mm"],
-    gia: 8990000,
+    ram_options: [
+      {
+        ram: "",
+        info: [
+          {
+            rom: "",
+            price: 8990000,
+          },
+          {
+            rom: "",
+            price: "",
+          },
+        ],
+      },
+    ],
     image: [
       "https://product.hstatic.net/200000544803/product/7_a79d10a5d24040419cc61dd339f5571a_master.png",
       "https://product.hstatic.net/200000544803/product/1_d76aa7adb12644e989ba9cc21a509984_master.png",
@@ -470,7 +498,21 @@ export const ProductsData = [
     name: "AirPods (gen 3)",
     serial: "AMOT00145-72",
     brand: "Apple",
-    gia: 5490000,
+    ram_options: [
+      {
+        ram: "",
+        info: [
+          {
+            rom: "",
+            price: 5490000,
+          },
+          {
+            rom: "",
+            price: "",
+          },
+        ],
+      },
+    ],
     image: [
       "https://product.hstatic.net/200000544803/product/1_e9d2c821129845038664bfe32d6f26f4_master.png",
       "https://product.hstatic.net/200000544803/product/2_ffc814354fe04175b11297afffbe4cca_master.png",
@@ -484,7 +526,21 @@ export const ProductsData = [
     name: "AirPods 2",
     serial: "AMOT00145-72",
     brand: "Apple",
-    gia: 4390000,
+    ram_options: [
+      {
+        ram: "",
+        info: [
+          {
+            rom: "",
+            price: 4390000,
+          },
+          {
+            rom: "",
+            price: "",
+          },
+        ],
+      },
+    ],
     image: [
       "https://product.hstatic.net/200000544803/product/1_e85e13e8773a456092fac446c069eb31_master.png",
       "https://product.hstatic.net/200000544803/product/2_8c4468502f824da8aa9d5b7db50a03f1_master.png",
@@ -499,6 +555,21 @@ export const ProductsData = [
     serial: "AMOT00145-72",
     brand: "Apple",
     gia: 2990000,
+    ram_options: [
+      {
+        ram: "",
+        info: [
+          {
+            rom: "",
+            price: 2990000,
+          },
+          {
+            rom: "",
+            price: "",
+          },
+        ],
+      },
+    ],
     image: [
       "https://product.hstatic.net/200000544803/product/1_17f5a705b63e465290ea81c157b7b45c_master.png",
       "https://product.hstatic.net/200000544803/product/2_f2f3d2923d99475e9a451cb4483257f9_master.png",
@@ -512,7 +583,21 @@ export const ProductsData = [
     name: "Apple AirTag (1 Pack)",
     serial: "AMOT00145-72",
     brand: "Apple",
-    gia: 2990000,
+    ram_options: [
+      {
+        ram: "",
+        info: [
+          {
+            rom: "",
+            price: 2990000,
+          },
+          {
+            rom: "",
+            price: "",
+          },
+        ],
+      },
+    ],
     image: [
       "https://product.hstatic.net/200000544803/product/1_17f5a705b63e465290ea81c157b7b45c_master.png",
       "https://product.hstatic.net/200000544803/product/2_f2f3d2923d99475e9a451cb4483257f9_master.png",
@@ -526,7 +611,21 @@ export const ProductsData = [
     name: "Sạc dự phòng không dây",
     serial: "AMOT00145-72",
     brand: "Apple",
-    gia: 2990000,
+    ram_options: [
+      {
+        ram: "",
+        info: [
+          {
+            rom: "",
+            price: 2990000,
+          },
+          {
+            rom: "",
+            price: "",
+          },
+        ],
+      },
+    ],
     image: [
       "https://product.hstatic.net/200000544803/product/mjwy3_35bd8123b09e471595b02553a7683a24_master.jpg",
       "https://product.hstatic.net/200000544803/product/mjwy3_av1_2941563c86ef4abf9745642cce054c56_master.jpg",
