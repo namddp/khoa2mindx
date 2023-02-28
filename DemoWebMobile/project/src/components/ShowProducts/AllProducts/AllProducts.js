@@ -132,10 +132,10 @@ const AllProducts = (AllProducts) => {
         <ul>
           {filteredProducts.map((product, index) => (
             <li
-              className="border border-[#e4e4e4] h-[250px] mb-4 relative overflow-hidden group transition"
+              className="border border-[#e4e4e4] h-[250px]  mb-4 relative overflow-hidden group transition"
               key={product?.id || index}
             >
-              <div className="absolute top-6 -right-11 group-hover:right-5 p-2 flex flex-col items-center justify-center gap-y-2 transition-all duration-300 ">
+              <div className="absolute top-6 -right-11 group-hover:right-5 p-2 flex flex-col items-center justify-center gap-y-2 group-hover:opacity-100 transition-all duration-300 ">
                 <button>
                   <div className="flex justify-center items-center text-white w-12 -h12 bg-red-500">
                     <BsPlus className="text-3xl" />
@@ -148,8 +148,10 @@ const AllProducts = (AllProducts) => {
                   <BsEyeFill />
                 </Link>
               </div>
-              <img src={product?.image?.[0]} alt={product?.name} />
-              <h3 className="all-hover-name-product">{product?.name}</h3>
+              <Link to={`/sanpham/${index}`}>
+                <img src={product?.image?.[0]} alt={product?.name} />
+              </Link>
+              <h3 className="all-hover-name-product ">{product?.name}</h3>
               <p className="">
                 {formatPrice(product?.options?.[0].info?.[0]?.price)}
               </p>
