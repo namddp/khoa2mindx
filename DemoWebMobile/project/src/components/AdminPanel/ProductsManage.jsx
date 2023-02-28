@@ -1,13 +1,14 @@
 import React,{useState} from 'react'
 import { ProductsData } from '../../data/ProductsData';
+import './ProductsManage.css';
 
-const ProductsManage = () => {
+const ProductsManage = (props) => {
+  const {products,setProducts} = props;
     const[name,setName] =  useState('');
     const[price,setPrice] =  useState('');
     const[image,setImage] =  useState('');
     const[type,setType] =  useState('');
     const[brand,setBrand] =  useState('');
-    const[status,setStatus] =  useState(true);
     const [product,setProduct] = useState({
         id : '',
         type: '',
@@ -16,7 +17,7 @@ const ProductsManage = () => {
         brand : '',
         color : ['gray','white','golden'],
         url : '',
-        ram_options : [{
+        options : [{
             ram : '8GB',
             info: [{
                 rom: "256GB",
@@ -25,53 +26,17 @@ const ProductsManage = () => {
         }],
         image: ['']
 });
-
-    const openEditForm = (id) => {
-        
+      console.log(products)
         const handleChange = (event) => {
             const { name, value } = event.target;
             setProduct({ ...product, [name]: value });
           };
         const handleEdit = (event) => {
             event.preventDefault();
-            ProductsData = ProductsData.filter(it => it.id !== id)
-            ProductsData = [...ProductsData,product]
+            setProducts(prev => prev.filter(it => it.id !== product.id))
+            setProducts(prev => [...prev,product])
         }
-        setStatus(!status)
-return(
-           status ? <></> : <div className="edit_form">
-           <form onSubmit={handleEdit}>
-              <label>
-                ID:
-                <input type="text" name='id' value={product.id} onChange={handleChange} />
-              </label>
-              <label>
-                Name:
-                <input type="text" name='name' value={product.name} onChange={handleChange} />
-              </label>
-              <label>
-                Type:
-                <input type="text" name='type' value={product.type} onChange={handleChange} />
-              </label>
-              <label>
-                Brand:
-                <input type="text" name='brand' value={product.brand} onChange={handleChange} />
-              </label>
-              <label>
-                image:
-                <textarea value={product.image} name='image' onChange={handleChange} />
-              </label>
-              <label>
-                Price:
-                <input type="number" name='price' value={product.price} onChange={handleChange} />
-              </label>
-              <button type="submit">Confirm</button>
-          </form>
-      </div>
-            
-        )
-        
-    }
+
     const handleSubmit = (event) => {
         event.preventDefault();
     
@@ -83,7 +48,7 @@ return(
             brand : brand,
             color : ['gray','white','golden'],
             url : '',
-            ram_options : [{
+            options : [{
                 ram : '8GB',
                 info: [{
                     rom: "256GB",
@@ -92,15 +57,16 @@ return(
             }],
             image: [image]
         };
-        ProductsData = [...ProductsData,productData]
+        setProducts(prev => [...prev,productData])
     }
     const handleDelete = (id) => {
-        ProductsData = ProductsData.filter(e => e.id !== id)
+        setProducts(prev => prev.filter(e => e.id !== id))
     }
   return (
     <>
     <div className='add_products'>
         <form onSubmit={handleSubmit}>
+          <h1>Thêm Sản Phẩm Mới</h1>
       <label>
         Name:
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
@@ -125,22 +91,53 @@ return(
     </form>
     </div>
     <div className='delete_products'>
+      <h1>Xoá, Sửa Sản Phẩm</h1>
         <ul className='list_item'>
-            {ProductsData.map(il => {
+            {products.map(il => {
                 return(
                     <li>
                         <img src="" alt="" />
                         <h5>{il.name}</h5>
                         <button onClick={() => handleDelete(il.id)}>Xoá Sản Phẩm</button>
+                        <div className="edit_form">
+                          <h6>Sửa Thông Tin</h6>
+           <form onSubmit={handleEdit}>
+              <label>
+                ID:
+                <input type="text" name='id' value={product.id} onChange={handleChange} placeholder={il.id}/>
+              </label>
+              <label>
+                Name:
+                <input type="text" name='name' value={product.name} onChange={handleChange} placeholder={il.name}/>
+              </label>
+              <label>
+                Type:
+                <input type="text" name='type' value={product.type} onChange={handleChange} placeholder={il.type}/>
+              </label>
+              <label>
+                Brand:
+                <input type="text" name='brand' value={product.brand} onChange={handleChange} placeholder={il.brand}/>
+              </label>
+              <label>
+                image:
+                <textarea value={product.image} name='image' onChange={handleChange} placeholder='link ảnh'/>
+              </label>
+              <label>
+                Price:
+                <input type="number" name='price' value={product.price} onChange={handleChange} placeholder={il.options[0].info[0].price}/>
+              </label>
+              <button type="submit">Confirm</button>
+          </form>
+      </div>    
                     </li>
                 )
             })}
         </ul>
         
     </div>
-    <div className='edit_products'>
+    {/* <div className='edit_products'>
     <ul className='list_item'>
-            {ProductsData.map(il => {
+            {products.map(il => {
                 return(
                     <li>
                         <img src="" alt="" />
@@ -150,7 +147,7 @@ return(
                 )
             })}
         </ul>
-    </div>
+    </div> */}
     </>
   )
 }

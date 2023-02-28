@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
-import { ProductsData } from '../../data/ProductsData'
+import { ProductsData } from '../../../data/ProductsData'
 import Slider from 'react-slick';
 import CountdownTimer from './CountdownTimer';
 import './DailyDeal.css';
@@ -8,7 +8,7 @@ var settings = {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
     // autoplay:true,
@@ -41,33 +41,40 @@ var settings = {
     ]
   };
 
-const DailyDeal = () => {
-  const [listItem, setListItem] = useState(ProductsData);
+const DailyDeal = (props) => {
+  const {products,setProducts,handleSelectLove,handleSelectCheck} = props;
   const [isCountdownPaused, setIsCountdownPaused] = useState(false);
+
   useEffect(() => {
     const interval = setInterval(() => {
       if (!isCountdownPaused) {
-        setListItem(prevListItems => {
+        setProducts(prevListItems => {
           const newItems = Array.from({length: 8}, () => {
-            return ProductsData[Math.floor(Math.random() * ProductsData.length)];
+            return products[Math.floor(Math.random() * products.length)];
           });
+          console.log(newItems);
           return newItems;
         });
       }
     }, 60000);
     return () => clearInterval(interval);
   }, [isCountdownPaused]);
+
   const handleCountdownPause = (isPaused) => {
     setIsCountdownPaused(isPaused);
     if (isPaused) {
-      setListItem(prevListItems => {
+      setProducts(prevListItems => {
         const newItems = Array.from({length: 8}, () => {
-          return ProductsData[Math.floor(Math.random() * ProductsData.length)];
+          return products[Math.floor(Math.random() * products.length)];
         });
+        console.log(newItems);
         return newItems;
+        
       });
     }
   }
+
+
   return (
     <>
        <div className='dailyDeal'>
@@ -76,16 +83,16 @@ const DailyDeal = () => {
           <h3><CountdownTimer onCountdownPause={handleCountdownPause} /></h3>
         </div>
         <Slider {...settings}>
-          {listItem.map(e => {
+          {products.map(e => {
             return (
               <div className='dealItem' key={e.id}>
                 <div className='dealImg'>
                   <img src={e.image[0]} alt="" />
                 </div>
                 <div className='action'>
-                  <span>yêu thích</span>
-                  <span>xem</span>
-                  <span>so sánh</span>
+                  <span onClick={()=>handleSelectLove(e.id)}>Thích</span>
+                  <span >Thêm Vào Giỏ</span>
+                  <span onClick={()=>handleSelectCheck(e.id)}>So Sánh</span>
                 </div>
                 <div className='itemImg'>
                   {e.image.map((i, index) => {
@@ -96,7 +103,7 @@ const DailyDeal = () => {
                 </div>
                 <div className='itemInfo'>
                   <h4>{e.name}</h4>
-                  <h6>{e.ram_options[0].info[0].price} VND<span>{e.ram_options[0].info[0].price * 0.1} VND</span></h6>
+                  <h6>{e.options[0].info[0].price * 0.9} VND<span>{e.options[0].info[0].price} VND</span></h6>
                 </div>
               </div>
             )

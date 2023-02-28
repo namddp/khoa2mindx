@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./HeaderMenu.css";
+import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 const HeaderMenu = () => {
   const [dropdown1, setDropdown1] = useState(false);
@@ -12,16 +13,16 @@ const HeaderMenu = () => {
   return (
     <ul className="header-menu">
       <li>
-        <a href="#">Trang Chủ </a>
+        <Link to="/">Trang Chủ</Link>
       </li>
       <li
         className="dropdown"
         onMouseEnter={handleDropdownEnter(setDropdown1)}
         onMouseLeave={handleDropdownLeave(setDropdown1)}
       >
-        <a href="#">
-          Sản Phẩm <i className="fa-solid fa-chevron-down fa-2xs "></i>
-        </a>
+        <Link to="/Sanpham">
+         Sản Phẩm <i className="fa-solid fa-chevron-down fa-2xs "></i>
+        </Link>
         {dropdown1 && (
           <div className="dropdown-content">
             <div className="flex flex-col md:flex-row md:justify-start">
@@ -153,8 +154,8 @@ const HeaderMenu = () => {
         <a href="#">Giới Thiệu</a>
       </li>
       <li>
-      <SearchBar/>
-         </li>
+        <SearchBar />
+      </li>
     </ul>
   );
 };
