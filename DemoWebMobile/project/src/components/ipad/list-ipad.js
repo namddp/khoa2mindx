@@ -33,7 +33,7 @@ function ListIpad(props) {
 }
 
 const dataIpad = ProductsData.filter((a) => a.type === "Ipad");
-console.log(dataIpad[0].ram_options[0]);
+console.log(dataIpad[0].options[0]);
 
 function ListIpads() {
   return (
