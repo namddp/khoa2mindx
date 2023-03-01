@@ -30,8 +30,8 @@ const Header = (props) => {
   return (
     <header
       className={`${
-        isHeaderVisible ? "visible" : "hidden"
-      } fixed bg-white w-full z-20 transition-all duration-300 `}
+        isHeaderVisible ? "visible" : 'hidden' 
+      }  bg-white w-full z-20 transition-all duration-300 `}
     >
       <nav>
         <div className="header-title">

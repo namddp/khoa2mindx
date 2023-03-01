@@ -7,7 +7,7 @@ import RunningText from "./components/header/RunningText";
 import Footer from "./components/Footer/Footer";
 import AllProducts from "./components/ShowProducts/AllProducts/AllProducts";
 import ProductsManage from "./components/AdminPanel/ProductsManage";
-import DetailsProducts from "./components/ShowProducts/Details/DetailsProducts";
+import ProductDetails from "./components/ShowProducts/Details/ProductDetails";
 import CheckItem from "./components/CheckItem/CheckItem";
 import CareItems from "./components/CareItems/CareItems";
 import SidebarProvider from "./components/Context/SidebarContext";
@@ -37,7 +37,7 @@ const App = () => {
       })
       .then((it) => {
         setProducts(it);
-        // console.log(it);
+        console.log(it);
       });
   }, []);
   const handleSelectLove = (id) => {
@@ -55,7 +55,7 @@ const App = () => {
       <hr />
       <Routes>
         <Route
-          path="/Sanpham"
+          path="/sanpham"
           element={
             <AllProducts
               productsData={productsData}
@@ -63,7 +63,7 @@ const App = () => {
             />
           }
         />
-        <Route path="/sanpham/:id" element={<DetailsProducts />} />
+        <Route path="/sanpham/:id" element={<ProductDetails />} />
         <Route
           path="/checkitems"
           element={
@@ -82,7 +82,6 @@ const App = () => {
             <CareItems cartItems={cartItems} setCartItems={setCartItems} />
           }
         />
-        <Route path="/Sanpham/:id" element={<DetailsProducts />} />
         <Route
           path="/manage"
           element={
@@ -107,7 +106,6 @@ const App = () => {
         <Route path="/iphone14new" element={<Iphone14New />} />
       </Routes>
       <Footer />
-
       <Sidebar />
     </SidebarProvider>
   );

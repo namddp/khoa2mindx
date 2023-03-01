@@ -20,7 +20,7 @@ const HeaderMenu = () => {
         onMouseEnter={handleDropdownEnter(setDropdown1)}
         onMouseLeave={handleDropdownLeave(setDropdown1)}
       >
-        <Link to="/Sanpham">
+        <Link to="/sanpham">
           Sản Phẩm <i className="fa-solid fa-chevron-down fa-2xs "></i>
         </Link>
         {dropdown1 && (

@@ -6,11 +6,15 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import SidebarProvider from "./components/Context/SidebarContext";
 import CartProvider from "./components/Context/CartContext";
+import ProductProvider from "./components/Context/ProductContext";
 ReactDOM.render(
   <SidebarProvider>
     <CartProvider>
       <BrowserRouter>
-        <App />
+        <ProductProvider>
+          {" "}
+          <App />
+        </ProductProvider>
       </BrowserRouter>
     </CartProvider>
   </SidebarProvider>,
