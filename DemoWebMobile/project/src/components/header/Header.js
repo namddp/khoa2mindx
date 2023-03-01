@@ -29,9 +29,7 @@ const Header = (props) => {
   }, []);
   return (
     <header
-      className={`${
-        isHeaderVisible ? "visible" : 'hidden' 
-      }  bg-white w-full z-20 transition-all duration-300 `}
+      className= "bg-white w-full z-20 transition-all duration-300 "
     >
       <nav>
         <div className="header-title">
@@ -49,16 +47,16 @@ const Header = (props) => {
             <li>
               <a href="#">Đăng Nhập</a>/ <a href="#"> Đăng Kí</a>
             </li>
-            <li>
+            {/* <li>
               <Link to="/careitems">
                 <i class="fa-regular fa-heart">{careItems.length}</i>
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link to="/checkitems">
                 <i class="fa-solid fa-code-compare">{checkItems.length}</i>
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/manage">
                 <i class="fa-solid fa-cart-shopping"></i>Manage

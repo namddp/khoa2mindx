@@ -13,6 +13,8 @@ import CareItems from "./components/CareItems/CareItems";
 import SidebarProvider from "./components/Context/SidebarContext";
 import Sidebar from "./components/ShowProducts/Slidebar/Sidebar";
 import Iphone14New from "./components/Home/iphone14/iphone14";
+import Payment from "../../project/src/components/Payment/Payment"
+import Shipping from "../../../DemoWebMobile/project/src/components/Payment/Shipping"
 const App = () => {
   const [products, setProducts] = useState([]);
   const [checkItems, setCheckItems] = useState([]);
@@ -88,6 +90,8 @@ const App = () => {
             <ProductsManage products={products} setProducts={setProducts} />
           }
         />
+        {/* <Route
+        path ="/thanhtoan" element={<Payment/>}/> */}
         <Route
           path="/"
           element={
