@@ -39,6 +39,7 @@ const ProductDetails = () => {
             <div className="text-xl  font-medium mb-6">
               {formatPrice(product?.options?.[0].info?.[0]?.price)}
             </div>
+            {/* nam đẹp trai */}
             <p className="mb-8">{name}</p>
             <button
               onClick={() => addToCart(product, product.id)}
