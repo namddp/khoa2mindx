@@ -365,7 +365,7 @@ export const ProductsData = [
     serial: "AMOT00145-72",
     brand: "Apple",
     color: ["gray", "white", "pink", "violet"],
-    desc:"Đánh giá chi tiết cấu hình iPad Mini 6 2021 64GB Wifi\
+    desc: "Đánh giá chi tiết cấu hình iPad Mini 6 2021 64GB Wifi\
     iPad Mini 6 2021 64GB Wifi vừa được ra mắt của nhà Apple sở hữu thiết kế màn hình tràn viền lớn hơn, hiệu năng mạnh mẽ, camera tích hợp thêm tính năng giống như dòng iPad Pro. Apple sẽ làm “siêu lòng” ngay các iFans với sự xuất hiện của iPhone 13 và chiếc tablet này trong năm 2021.\
     Thiết kế sở hữu nâng cấp đến từ kích thước màn hình\
     iPad Mini 6 2021 64GB Wifi vẫn sở hữu thiết kế 4 góc màn bo tròn cùng viền mỏng, kích thước thực tế của chiếc tablet này là 195.4 x 134.8 x 6.3mm. Màn hình của iPad Mini 6 có độ lớn tăng lên đáng kể so với dòng tiền nhiệm ở mức 8.3 inch tràn màn hình ra viền, nâng cao tầm nhìn nội dung hiển thị tối đa. Tablet trông giống như một phiên bản nhỏ hơn của iPad Air 4.\
@@ -400,7 +400,7 @@ export const ProductsData = [
     serial: "AMOT00145-72",
     brand: "Apple",
     color: ["gray", "white"],
-    desc:"iPad Pro 2021 12.9inch 512GB 5G là chiếc iPad cao cấp nhất hiện này vừa được Apple ra mắt, với nhiều cải tiến vượt bậc cùng dung lượng 512 rộng lớn cho người dùng những trải nghiệm vượt bậc trên một thiết bị thông minh.\
+    desc: "iPad Pro 2021 12.9inch 512GB 5G là chiếc iPad cao cấp nhất hiện này vừa được Apple ra mắt, với nhiều cải tiến vượt bậc cùng dung lượng 512 rộng lớn cho người dùng những trải nghiệm vượt bậc trên một thiết bị thông minh.\
     Thiết kế đẳng cấp với màn hình rộng 12.9inch\
     iPad Pro 2021 12.9inch M1 512GB Wifi 5G với thiết kế tương đối giống với các phiên bản iPad trước tuy nhiên màn hình được cải thiện với viền mỏng hơn, cho không gian hiển thị rộng rãi, người dùng dễ dàng quan sát, thực hiện các thao tác một cách dễ dàng hơn. \
     Ngoài ra thiết bị cũng được sử dụng với hệ thống  camera TrueDepth bảo mật Face ID và sử dụng công nghệ màn hình mini-LED hiện đại, hiển thị màu sắc chân thật, sống động.\
@@ -438,7 +438,7 @@ export const ProductsData = [
     serial: "AMOT00145-72",
     brand: "Apple",
     color: ["gray", "black", "white", "sliver"],
-    desc:"MacBook Air M2 2022 256GB - thiết kế vuông vức, hiệu năng vô cùng mạnh mẽ\
+    desc: "MacBook Air M2 2022 256GB - thiết kế vuông vức, hiệu năng vô cùng mạnh mẽ\
     MacBook Air M2 256GB là chiếc MacBook Air mới nhất vừa được Apple ra mắt tại sự kiện WWDC 2022. Chiếc máy sở hữu thiết kế khá tương đồng với dòng MacBook Pro 14-inch với ngoại hình khá vuông vức, cứng cáp khác hẳn so với dòng MacBook Air tiền nhiệm.\
     Macbook Air M2 8GB 256GB cũng được nâng cấp khá nhiều về mặt phần cứng khi sở hữu vi xử lý mới nhất là Apple M2, hỗ trợ bộ nhớ trong lên đến 2TB, dung lượng RAM tối đa lên đến 24GB. Hỗ trợ chuẩn kết nối mới nhất với Wifi-6, cổng kết nối Thunderbolt 4 cho tốc độ truyền tải dữ liệu lên đến 40GB/s. \
     Đặc điểm nổi bật trên MacBook Air M2 2022\
@@ -490,7 +490,7 @@ export const ProductsData = [
     serial: "AMOT00145-72",
     brand: "Apple",
     color: ["pink", "green", "blue", "sliver"],
-    desc:"Đánh giá chi tiết iMac 24-inch 2021 M1 256GB màn hình 4.5K 7 Core GPU\
+    desc: "Đánh giá chi tiết iMac 24-inch 2021 M1 256GB màn hình 4.5K 7 Core GPU\
     iMac 24-inch 2021 M1 256GB màn hình 4.5K 7 Core GPU là dòng máy tính để bàn all in one tốt nhất của Apple từ trước đến nay. Với thiết kế hoàn toàn mới cùng cấu hình mạnh mẽ, iMac 24 inch 2021 M1 hứa hẹn sẽ mang lại nhiều trải nghiệm tuyệt vời cho người dùng.\
     Thiết kế trẻ trung, nhiều màu sắc\
     iMac 24-inch 2021 M1 256GB màn hình 4.5K 7 Core GPU đã được thay đổi thiết kế hoàn toàn mới khi so với các thế hệ tiền nhiệm. Đây là một sự thay đổi thiết kế bất ngờ đến từ Apple khiến giới công nghệ thích thú.\
@@ -525,7 +525,7 @@ export const ProductsData = [
     serial: "AMOT00145-72",
     brand: "Apple",
     color: ["gray", "sliver"],
-    desc:"Những tính năng nổi bật trên Apple Watch Series 3\
+    desc: "Những tính năng nổi bật trên Apple Watch Series 3\
     Được định hướng là sản phẩm nổi bật để phục vụ nhu cầu theo dõi sức khỏe cá nhân và hỗ trợ tương tác hằng ngày với thiết bị thông mình của bạn. Những tính năng bổ ích sau là minh chứng cho điều đó:\
     Cảm biến đo nhịp tim. Tính năng này cho phép bạn biết về thông tin nhịp tim, mọi lúc mọi nơi, kể cả khi ngủ cho đến khi tập luyện. Nếu như Series 3 phát hiện ra những tình huống bất thường như: cao bất thường trong khi không có vận động nào đang được diễn ra, hoặc là thấp bất thường trong khi người dùng vẫn đang hoạt động.\
     Khả năng chống nước hiệu quả. Apple Watch s3 có khả năng chống nước ở độ sâu 50m. Điều này giúp các bạn thoải mái mang Apple Watch khi đi bơi mà không cần lo lắng. Ngoài ra, Apple Watch còn có chức năng khóa nước (Water lock). Khi bật tính năng này lên màn hình Apple Watch sẽ khóa cảm ứng, tránh trường hợp nước gây nhảy cảm ứng\
@@ -554,7 +554,7 @@ export const ProductsData = [
     serial: "AMOT00145-72",
     brand: "Apple",
     color: ["gray", "sliver"],
-    desc:"Apple Watch SE 40mm - Sang trọng, đẳng cấp như bản cao cấp\
+    desc: "Apple Watch SE 40mm - Sang trọng, đẳng cấp như bản cao cấp\
     Năm 2020, chắc hẳn các iFan đang háo hức đón chờ các siêu phẩm được ra mắt từ Apple. Đặc biệt Apple Watch SE 40mm  GPS) là một trong những phiên bản được Apple ra mắt vào năm 2020 và đang được nhiều người dùng quan tâm không kém gì phiên bản chính thức cao cấp.\
     Thiết kế thời trang, màn hình Retina LTPO OLED hiển thị chất lượng cao\
     Apple Watch SE 40mm (GPS) có thiết kế vừa năng động và mang đậm tính thời trang rất giống với thế hệ trước đây mà nhà sản xuất Apple đã thiết kế.\
@@ -584,7 +584,7 @@ export const ProductsData = [
     name: "AirPods (gen 3)",
     serial: "AMOT00145-72",
     brand: "Apple",
-    desc:"Tai nghe AirPods 3 - Âm thanh mới mang lại trải nghiệm ấn tượng\
+    desc: "Tai nghe AirPods 3 - Âm thanh mới mang lại trải nghiệm ấn tượng\
     Được dự đoán Apple sẽ ra mắt Apple AirPods 3 vào cuối năm 2021 và sẽ gây ra tiếng vang không hề nhỏ như hai người đàn anh của nó. Cùng với đó là những nâng cấp về mặt công nghệ mới để đem lại chất lượng tốt hơn cho người dùng so với các thế hệ tai nghe bluetooth AirPods trước đây.\
     Thiết kế sang trọng, nhiều thay đổi so với thế hệ trước\
     Tai nghe AirPods 3 sở hữu nhiều thiết kế tương tự với thế hệ AirPods Pro tuy nhiên không có phần nút tai. Thiết kế này mang lại cảm giá thoải mái khi sử dụng cho người dùng, phù hợp với đa số kích thước tai. Đặc biệt, thiết kế này thích hợp với người dùng thường xuyên đổ mồ hôi mà không hề gây khó chịu. Phần thân tai cũng được làm ngắn hơn, gọn nhẹ hơn.\
@@ -611,7 +611,7 @@ export const ProductsData = [
     name: "AirPods 2",
     serial: "AMOT00145-72",
     brand: "Apple",
-    desc:"Tai nghe Apple AirPods 2 – Thiết kế tối giản, chất lượng âm thanh tuyệt vời\
+    desc: "Tai nghe Apple AirPods 2 – Thiết kế tối giản, chất lượng âm thanh tuyệt vời\
     Vừa qua, Apple đã chính thức cho ra mắt chiếc tai nghe Airpods 2. Thế hệ thứ 2 lần này không có nhiều sự khác biệt so với thế hệ đầu về ngoại hình, trừ một số chi tiết về đèn báo hiệu cũng như ra mắt thêm phiên bản sạc không dây và sạc thường (sạc có dây). Ngoài ra, bạn có thể tham khảo thêm Apple Airpods Pro, sắp được ra mắt trong thời gian tới.\
     AirPods 2 chính hãng VN/A là gì? Vì sao nên lựa chọn?\
     Đầu tiên, AirPods 2 chính hãng VN/A là hàng chính hãng do Apple sản xuất theo tiêu chuẩn của thị trường Việt Nam. Thiết bị được phân phối chính hãng thông qua các đại lý ủy quyền của Apple. Vậy tai nghe bluetooth Apple AirPods 2 chính hãng VN/A có gì khác những mẫu tai nghe cũ, tai nghe xách tay?\
@@ -638,7 +638,7 @@ export const ProductsData = [
     name: "Apple AirTag (1 Pack)",
     serial: "AMOT00145-72",
     brand: "Apple",
-    desc:"Apple Airtag - Thiết bị tìm đồ thất lạc của chính Apple\
+    desc: "Apple Airtag - Thiết bị tìm đồ thất lạc của chính Apple\
     Airtag là một thiết bị nhỏ được tích hợp công nghệ Bluetooth dùng trong việc tìm kiếm đồ vật, trang thiết bị thất lạc. Dù có nhiều sản phẩm tương tự nhưng phụ kiện nhà thông minh của hãng Apple hứa hẹn sẽ được tích hợp công nghệ sâu hơn, cho người dùng trải nghiệm những hoạt động tuyệt vời hơn nữa của thiết bị.\
     Thiết kế tròn lạ mắt, có logo Apple trên mặt trước\
     Phụ kiện theo dõi Apple Airtags có thiết kế hình tròn dẹp, một mặt được gắn logo quả táo đặc trưng của Apple mặt còn lại người dùng có thể tùy biến  theo sở thích cá nhân. Thiết bị sẽ được gắn vào đồ vật thông qua keo đặc biệt hoặc móc nhỏ và sử dụng cùng với các đồ vật khác.\
@@ -661,28 +661,28 @@ export const ProductsData = [
       "https://product.hstatic.net/200000544803/product/4_05d390d92194486aa1d7a25426f9149e_master.png",
     ],
   },
-  {
-    id: 18,
-    type: "SDP",
-    name: "Apple AirTag (1 Pack)",
-    serial: "AMOT00145-72",
-    brand: "Apple",
-    options: [
-      {
-        info: [
-          {
-            price: 2990000,
-          },
-        ],
-      },
-    ],
-    image: [
-      "https://product.hstatic.net/200000544803/product/1_17f5a705b63e465290ea81c157b7b45c_master.png",
-      "https://product.hstatic.net/200000544803/product/2_f2f3d2923d99475e9a451cb4483257f9_master.png",
-      "https://product.hstatic.net/200000544803/product/3_e997f93b7f284619adfa4cc5b57198b7_master.png",
-      "https://product.hstatic.net/200000544803/product/4_05d390d92194486aa1d7a25426f9149e_master.png",
-    ],
-  },
+  // {
+  //   id: 18,
+  //   type: "SDP",
+  //   name: "Apple AirTag (1 Pack)",
+  //   serial: "AMOT00145-72",
+  //   brand: "Apple",
+  //   options: [
+  //     {
+  //       info: [
+  //         {
+  //           price: 2990000,
+  //         },
+  //       ],
+  //     },
+  //   ],
+  //   image: [
+  //     "https://product.hstatic.net/200000544803/product/1_17f5a705b63e465290ea81c157b7b45c_master.png",
+  //     "https://product.hstatic.net/200000544803/product/2_f2f3d2923d99475e9a451cb4483257f9_master.png",
+  //     "https://product.hstatic.net/200000544803/product/3_e997f93b7f284619adfa4cc5b57198b7_master.png",
+  //     "https://product.hstatic.net/200000544803/product/4_05d390d92194486aa1d7a25426f9149e_master.png",
+  //   ],
+  // },
   {
     createdAt: "2023-02-20T20:09:56.436Z",
     name: "Miss Kayla O'Hara",
