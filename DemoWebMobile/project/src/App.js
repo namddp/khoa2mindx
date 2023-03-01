@@ -87,7 +87,7 @@ const App = () => {
         <Route
           path="/manage"
           element={
-            <ProductsManage products={products} setProducts={setProducts} />
+            <ProductsManage productsData={productsData} setProductsData={setProductsData} />
           }
         />
         {/* <Route

@@ -5,12 +5,12 @@ import { BsPlus, BsEyeFill } from "react-icons/bs";
 import { ProductsData } from "../../../data/ProductsData";
 import { CartContext } from "../../Context/CartContext";
 const AllProducts = (props) => {
+  const {productsData,setProductsData} = props
   const [selectedOptions, setSelectedOptions] = useState({
     type: [],
     brand: [],
     color: [],
   });
-  const [productsData, setProductsData] = useState([]);
 
   const formatPrice = (price) => {
     const f = new Intl.NumberFormat("vi-vn", {
@@ -20,14 +20,6 @@ const AllProducts = (props) => {
 
     return f.format(price);
   };
-
-  useEffect(() => {
-    fetch("https://63f488d42213ed989c44ccc5.mockapi.io/products")
-      .then((response) => response.json())
-      .then((data) => setProductsData(data))
-      .catch((error) => console.error(error));
-  }, []);
-
   const handleCheckboxChange = (event) => {
     const { name, value, checked } = event.target;
     setSelectedOptions((prevState) => ({
