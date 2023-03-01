@@ -1,9 +1,7 @@
-import { useState, useEffect } from "react";
+import React from "react";
 import Link from "react-router";
 const DetailProducts = ({ match }) => {
- <div>
-  this is detail
- </div>
+  return <div>this is detail</div>;
 };
 
 export default DetailProducts;
