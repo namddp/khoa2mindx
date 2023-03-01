@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import "./HeaderMenu.css";
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
-import { SidebarContext } from "../Context/SidebarContext"; 
+import { SidebarContext } from "../Context/SidebarContext";
 const HeaderMenu = () => {
   const [dropdown1, setDropdown1] = useState(false);
   const [dropdown2, setDropdown2] = useState(false);
@@ -20,8 +20,8 @@ const HeaderMenu = () => {
         onMouseEnter={handleDropdownEnter(setDropdown1)}
         onMouseLeave={handleDropdownLeave(setDropdown1)}
       >
-        <Link to="/Sanpham">
-         Sản Phẩm <i className="fa-solid fa-chevron-down fa-2xs "></i>
+        <Link to="/sanpham">
+          Sản Phẩm <i className="fa-solid fa-chevron-down fa-2xs "></i>
         </Link>
         {dropdown1 && (
           <div className="dropdown-content">
@@ -145,7 +145,9 @@ const HeaderMenu = () => {
         )}
       </li>
       <li>
-        <a href="#">iPhone14</a>
+        <Link to="/iphone14new">
+          <a href="#">iPhone14</a>
+        </Link>
       </li>
       <li>
         <a href="#">Liên Hệ</a>

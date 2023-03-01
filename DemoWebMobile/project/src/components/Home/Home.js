@@ -6,8 +6,16 @@ import Policy from "./policy/Policy";
 import SlideBanner from "./slidebanner/SlideBanner";
 import ListItems from "../ipad/list-ipad";
 const Home = (props) => {
-  const {products, setProducts,checkItems, 
-    setCheckItems,careItems, setCareItems,handleSelectCheck,handleSelectLove} = props
+  const {
+    products,
+    setProducts,
+    checkItems,
+    setCheckItems,
+    careItems,
+    setCareItems,
+    handleSelectCheck,
+    handleSelectLove,
+  } = props;
 
   useEffect(() => {
     fetch("https://63f3daa4864fb1d6001eedae.mockapi.io/api/products", {
@@ -21,12 +29,11 @@ const Home = (props) => {
       })
       .then((it) => {
         setProducts(it);
-        console.log(it);
+        // console.log(it);
       });
   }, []);
   return (
-    <div>
-      
+    <div className="">
       <SlideBanner />
       <Policy />
       <DailyDeal
@@ -37,7 +44,7 @@ const Home = (props) => {
         setCheckItems={setCheckItems}
         careItems={careItems}
         handleSelectCheck={handleSelectCheck}
-              handleSelectLove={handleSelectLove}
+        handleSelectLove={handleSelectLove}
       />
       <ListItems/>
     </div>
