@@ -683,25 +683,5 @@ export const ProductsData = [
       "https://product.hstatic.net/200000544803/product/4_05d390d92194486aa1d7a25426f9149e_master.png",
     ],
   },
-  {
-    createdAt: "2023-02-20T20:09:56.436Z",
-    name: "Miss Kayla O'Hara",
-    avatar:
-      "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/696.jpg",
-    id: "19",
-  },
-  {
-    createdAt: "2023-02-20T21:57:07.386Z",
-    name: "Toni Dickinson",
-    avatar:
-      "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/637.jpg",
-    id: "20",
-  },
-  {
-    createdAt: "2023-02-21T05:09:50.249Z",
-    name: "Mrs. Viola Smith",
-    avatar:
-      "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/512.jpg",
-    id: "21",
-  },
+
 ];

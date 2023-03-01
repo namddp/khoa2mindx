@@ -33,7 +33,7 @@ const Home = (props) => {
       });
   }, []);
   return (
-    <div className="py-48">
+    <div className="">
       <SlideBanner />
       <Policy />
       <DailyDeal

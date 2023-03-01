@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect,useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import { ProductsData } from "../../../data/ProductsData";
 import Slider from "react-slick";
 import CountdownTimer from "./CountdownTimer";
@@ -41,7 +41,14 @@ var settings = {
     },
   ],
 };
+const formatPrice = (price) => {
+  const f = new Intl.NumberFormat("vi-vn", {
+    style: "currency",
+    currency: "VND",
+  });
 
+  return f.format(price);
+};
 const DailyDeal = (props) => {
   const { products, setProducts, handleSelectLove, handleSelectCheck } = props;
   const [isCountdownPaused, setIsCountdownPaused] = useState(false);
@@ -84,17 +91,17 @@ const DailyDeal = (props) => {
           </h3>
         </div>
         <Slider {...settings}>
-          {products.map((e,index) => {
+          {products.map((e, index) => {
             return (
               <div className="dealItem" key={e.id}>
                 <div className="dealImg">
                   <img src={e.image[0]} alt="" />
                 </div>
-                <div className="action">
+                {/* <div className="action">
                   <button onClick={() => handleSelectLove(e.id)}>Thích</button>
                   <button onClick={()=>addToCart(e,index)}>Thêm Vào Giỏ</button>
                   <button onClick={() => handleSelectCheck(e.id)}>So Sánh</button>
-                </div>
+                </div> */}
                 <div className="itemImg">
                   {e.image.map((i, index) => {
                     return <img src={i} alt="" key={index} />;
@@ -103,8 +110,11 @@ const DailyDeal = (props) => {
                 <div className="itemInfo">
                   <h4>{e.name}</h4>
                   <h6>
-                    {e.options[0].info[0].price * 0.9} VND
-                    <span>{e.options[0].info[0].price} VND</span>
+                     <div>{formatPrice(e.options[0].info[0].price * 0.9)}</div> 
+                    <span className="top-10px">
+                      {formatPrice(e.options?.[0].info?.[0]?.price)}
+                      VND
+                    </span>
                   </h6>
                 </div>
               </div>

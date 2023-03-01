@@ -67,7 +67,7 @@ const AllProducts = (props) => {
   const { addToCart } = useContext(CartContext);
   return (
     <div>
-      <div className="all-product-list py-48">
+      <div className="all-product-list ">
         <div className="all-filter">
           <h1>Danh sách </h1>
           <div>
