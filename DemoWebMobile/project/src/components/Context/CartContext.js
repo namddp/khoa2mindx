@@ -16,7 +16,8 @@ const CartProvider = ({ children }) => {
   useEffect(() => {
     const total = cart.reduce((accumulator, currentItem) => {
       return (
-        accumulator + currentItem.options?.[0].info?.[0]?.price * currentItem.amount
+        accumulator +
+        currentItem.options?.[0].info?.[0]?.price * currentItem.amount
       );
     }, 0);
     setTotal(total);
@@ -75,10 +76,9 @@ const CartProvider = ({ children }) => {
         }
       });
       setCart(newCart);
-    } else {
-      if (cartItem.amount < 2) {
-        removeFromCart(id);
-      }
+    }
+    if (cartItem.amount < 2) {
+      removeFromCart(id);
     }
   };
   return (
