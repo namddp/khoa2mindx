@@ -60,7 +60,7 @@ const AllProducts = (props) => {
     new Set(productsData.flatMap((p) => (p.color ? p.color : [])))
   );
   return (
-    <div className="all-product-list">
+    <div className="all-product-list ">
       <div className="all-filter">
         <h1>Danh sách </h1>
         <div>
