@@ -84,7 +84,7 @@ const ProductsManage = (props) => {
         </Form.Group>
       <Form.Group controlId="formFileSm" className="mb-3">
         <Form.Label>Hình Ảnh Sản Phẩm</Form.Label>
-        <Form.Control value={image} type="file" size="sm" onChange={(e) => setImage(e.target.value)}/>
+        <Form.Control value={image} type="text" size="sm" onChange={(e) => setImage(e.target.value)}/>
       </Form.Group>
       <Button variant="primary" type="submit">
         Submit
