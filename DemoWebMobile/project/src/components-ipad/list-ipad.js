@@ -12,11 +12,12 @@ const formatPrice = (price) => {
   return f.format(price);
 };
 
-function MenuItems() {
+function MenuItems({ menuValue }) {
   const [activeItem, setActiveItem] = useState("");
 
   const handleItemClick = (item) => {
     setActiveItem(item);
+    menuValue(item);
   };
 
   return (
@@ -156,7 +157,7 @@ function ListAccessory(props) {
   );
 }
 
-const dataAccessory = ProductsData.filter((a) => a.type === "Apple Watch");
+const dataAccessory = ProductsData.filter((a) => a.type === "SDP");
 
 function ListAccessories() {
   return (
@@ -180,7 +181,6 @@ function ListAccessories() {
   );
 }
 function ListiPhone(props) {
-  // console.log("AA", props);
   return (
     <div className="listIphone-container w-[265px] h-[450px] border-solid border-[1px] rounded-[20px] text-center ml-[10px] p-[5px] shadow-xl hover:shadow-gray-500">
       <div className="text-center h-[265px] w-[265px]">
@@ -295,13 +295,15 @@ function ListMacBooks() {
 }
 
 function ListItems() {
+  const [clickk, setclickk] = useState("ipad");
+
   return (
     <div>
-      <MenuItems />
-      <ListIpads />
-      <ListMacBooks />
-      <ListAccessories />
-      <ListiPhones />
+      <MenuItems menuValue={setclickk} />
+      {clickk === "ipad" && <ListIpads valueItem={clickk} />}
+      {clickk === "macbook" && <ListMacBooks valueItem={clickk} />}
+      {clickk === "phukien" && <ListAccessories valueItem={clickk} />}
+      {clickk === "iphone" && <ListiPhones valueItem={clickk} />}
     </div>
   );
 }
