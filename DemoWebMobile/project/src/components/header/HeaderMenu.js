@@ -3,6 +3,7 @@ import "./HeaderMenu.css";
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import { SidebarContext } from "../Context/SidebarContext";
+
 const HeaderMenu = () => {
   const [dropdown1, setDropdown1] = useState(false);
   const [dropdown2, setDropdown2] = useState(false);
@@ -26,61 +27,67 @@ const HeaderMenu = () => {
         {dropdown1 && (
           <div className="dropdown-content">
             <div className="flex flex-col md:flex-row md:justify-start">
-              <div className="dropdown-content-child">
-                <a href="#">
-                  {" "}
-                  <b>Mac</b>
-                </a>
-                <div>
-                  <a href="#">MacBook Air</a>
+              <Link to="/sanpham">
+                <div className="dropdown-content-child">
+                  <a href="#">
+                    {" "}
+                    <b>Mac</b>
+                  </a>
+                  <div>
+                    <a href="#">MacBook Air</a>
+                  </div>
+                  <div>
+                    <a href="#">MacBook Pro</a>
+                  </div>
+                  <div>
+                    <a href="#">iMac 24'</a>
+                  </div>
+                  <div>
+                    <a href="#">Mac Mini</a>
+                  </div>
                 </div>
-                <div>
-                  <a href="#">MacBook Pro</a>
+              </Link>
+              <Link to="/sanpham">
+                <div className=" dropdown-content-child">
+                  <a href="#">
+                    <b>iPad</b>
+                  </a>
+                  <div>
+                    <a href="#">iPad Air</a>
+                  </div>
+                  <div>
+                    <a href="#">iPad Pro</a>
+                  </div>
+                  <div>
+                    <a href="#">iPad </a>
+                  </div>
+                  <div>
+                    <a href="#">iPad Mini</a>
+                  </div>
                 </div>
-                <div>
-                  <a href="#">iMac 24'</a>
+              </Link>
+              <Link to="/sanpham">
+                <div className=" dropdown-content-child">
+                  <a href="#">
+                    <b>iPhone</b>
+                  </a>
+                  <div>
+                    <a href="#">iPhone X</a>
+                  </div>
+                  <div>
+                    <a href="#">iPhone 11</a>
+                  </div>
+                  <div>
+                    <a href="#">iPhone SE</a>
+                  </div>
+                  <div>
+                    <a href="#"> iPhone 12</a>
+                  </div>
+                  <div>
+                    <a href="#"> iPhone 13</a>
+                  </div>
                 </div>
-                <div>
-                  <a href="#">Mac Mini</a>
-                </div>
-              </div>
-              <div className=" dropdown-content-child">
-                <a href="#">
-                  <b>iPad</b>
-                </a>
-                <div>
-                  <a href="#">iPad Air</a>
-                </div>
-                <div>
-                  <a href="#">iPad Pro</a>
-                </div>
-                <div>
-                  <a href="#">iPad </a>
-                </div>
-                <div>
-                  <a href="#">iPad Mini</a>
-                </div>
-              </div>
-              <div className=" dropdown-content-child">
-                <a href="#">
-                  <b>iPhone</b>
-                </a>
-                <div>
-                  <a href="#">iPhone X</a>
-                </div>
-                <div>
-                  <a href="#">iPhone 11</a>
-                </div>
-                <div>
-                  <a href="#">iPhone SE</a>
-                </div>
-                <div>
-                  <a href="#"> iPhone 12</a>
-                </div>
-                <div>
-                  <a href="#"> iPhone 13</a>
-                </div>
-              </div>
+              </Link>
             </div>
           </div>
         )}
@@ -90,6 +97,7 @@ const HeaderMenu = () => {
         onMouseEnter={handleDropdownEnter(setDropdown2)}
         onMouseLeave={handleDropdownLeave(setDropdown2)}
       >
+        
         <a href="#">
           Phụ Kiện <i className="fa-solid fa-chevron-down fa-2xs"></i>
         </a>

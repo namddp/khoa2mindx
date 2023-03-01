@@ -90,8 +90,8 @@ const App = () => {
             <ProductsManage productsData={productsData} setProductsData={setProductsData} />
           }
         />
-        {/* <Route
-        path ="/thanhtoan" element={<Payment/>}/> */}
+        <Route
+        path ="/thanhtoan" element={<Payment/>}/>
         <Route
           path="/"
           element={
