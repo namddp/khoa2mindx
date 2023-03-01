@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import {AiOutlineSetting} from 'react-icons/ai'
 import HeaderMenu from "./HeaderMenu";
 import { SidebarContext } from "../Context/SidebarContext";
 import { CartContext } from "../Context/CartContext";
@@ -59,7 +60,7 @@ const Header = (props) => {
             </li> */}
             <li>
               <Link to="/manage">
-                <i class="fa-solid fa-cart-shopping"></i>Manage
+                <i class="fa-solid"><AiOutlineSetting/></i>
               </Link>
             </li>
 

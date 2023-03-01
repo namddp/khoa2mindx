@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect, useContext } from "react";
 import { ProductsData } from "../../../data/ProductsData";
 import Slider from "react-slick";
+import {AiOutlineShoppingCart,AiOutlineLike,AiOutlineCheck} from 'react-icons/ai'
 import CountdownTimer from "./CountdownTimer";
 import { CartContext } from "../../Context/CartContext";
 import "./DailyDeal.css";
