@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import "./AllProducts.css";
 import { BsPlus, BsEyeFill } from "react-icons/bs";
 import { ProductsData } from "../../../data/ProductsData";
-
-const AllProducts = (AllProducts) => {
+import { CartContext } from "../../Context/CartContext";
+const AllProducts = (props) => {
+  const {productsData,setProductsData} = props
   const [selectedOptions, setSelectedOptions] = useState({
     type: [],
     brand: [],
     color: [],
   });
-  const [productsData, setProductsData] = useState([]);
 
   const formatPrice = (price) => {
     const f = new Intl.NumberFormat("vi-vn", {
