@@ -219,7 +219,7 @@ function ListiPhones() {
   return (
     <div className="flex justify-center gap-[1px]">
       {dataiPhone.map((item, index) => {
-        console.log("item", item);
+        // console.log("item", item);
         return (
           <ListiPhone
             key={index}

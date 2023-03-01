@@ -4,7 +4,7 @@ import "./AllProducts.css";
 import { BsPlus, BsEyeFill } from "react-icons/bs";
 import { ProductsData } from "../../../data/ProductsData";
 import { CartContext } from "../../Context/CartContext";
-const AllProducts = (AllProducts) => {
+const AllProducts = (props) => {
   const [selectedOptions, setSelectedOptions] = useState({
     type: [],
     brand: [],
@@ -66,99 +66,101 @@ const AllProducts = (AllProducts) => {
   );
   const { addToCart } = useContext(CartContext);
   return (
-    <div className="all-product-list">
-      <div className="all-filter">
-        <h1>Danh sách </h1>
-        <div>
-          <h2>Thể Loại</h2>
-          <input
-            type="checkbox"
-            name="type"
-            value="Macbook"
-            onChange={handleCheckboxChange}
-          />
-          Macbook
-          <br />
-          <input
-            type="checkbox"
-            name="type"
-            value="Iphone"
-            onChange={handleCheckboxChange}
-          />
-          iPhone
-          <br />
-          <input
-            type="checkbox"
-            name="type"
-            value="Ipad"
-            onChange={handleCheckboxChange}
-          />
-          iPad
-          <br />
-          <input
-            type="checkbox"
-            name="type"
-            value="SDP"
-            onChange={handleCheckboxChange}
-          />
-          Phụ Kiện
+    <div>
+      <div className="all-product-list ">
+        <div className="all-filter">
+          <h1>Danh sách </h1>
+          <div>
+            <h2>Thể Loại</h2>
+            <input
+              type="checkbox"
+              name="type"
+              value="Macbook"
+              onChange={handleCheckboxChange}
+            />
+            Macbook
+            <br />
+            <input
+              type="checkbox"
+              name="type"
+              value="Iphone"
+              onChange={handleCheckboxChange}
+            />
+            iPhone
+            <br />
+            <input
+              type="checkbox"
+              name="type"
+              value="Ipad"
+              onChange={handleCheckboxChange}
+            />
+            iPad
+            <br />
+            <input
+              type="checkbox"
+              name="type"
+              value="SDP"
+              onChange={handleCheckboxChange}
+            />
+            Phụ Kiện
+          </div>
+          <div>
+            <h2>Thương Hiệu</h2>
+            <input
+              type="checkbox"
+              name="brand"
+              value="Apple"
+              onChange={handleCheckboxChange}
+            />
+            Apple
+          </div>
+          <div>
+            <h2>Màu Sắc</h2>
+            {colors.map((color) => (
+              <div key={color}>
+                <input
+                  type="checkbox"
+                  name="color"
+                  value={color}
+                  onChange={handleColorChange}
+                />
+                {color}
+              </div>
+            ))}
+          </div>
+          {/* <Sort /> */}
         </div>
-        <div>
-          <h2>Thương Hiệu</h2>
-          <input
-            type="checkbox"
-            name="brand"
-            value="Apple"
-            onChange={handleCheckboxChange}
-          />
-          Apple
-        </div>
-        <div>
-          <h2>Màu Sắc</h2>
-          {colors.map((color) => (
-            <div key={color}>
-              <input
-                type="checkbox"
-                name="color"
-                value={color}
-                onChange={handleColorChange}
-              />
-              {color}
-            </div>
-          ))}
-        </div>
-        {/* <Sort /> */}
-      </div>
-      <div className="all-product-display">
-        <ul>
-          {filteredProducts.map((product, index) => (
-            <li
-              className="border border-[#e4e4e4] h-[250px]  mb-4 relative overflow-hidden group transition"
-              key={product?.id || index}
-            >
-              <div className="absolute top-6 -right-11 group-hover:right-5 p-2 flex flex-col items-center justify-center gap-y-2 group-hover:opacity-100 transition-all duration-300 ">
-                  <button onClick={()=>addToCart(product,index)}>
+        <div className="all-product-display">
+          <ul>
+            {filteredProducts.map((product, id) => (
+              <li
+                className="border border-[#e4e4e4] h-[250px]  mb-4 relative overflow-hidden group transition"
+                key={product?.id || id}
+              >
+                <div className="absolute top-6 -right-11 group-hover:right-5 p-2 flex flex-col items-center justify-center gap-y-2 group-hover:opacity-100 transition-all duration-300 ">
+                  <button onClick={() => addToCart(product, id)}>
                     <div className="flex justify-center items-center text-white w-12 -h12 bg-red-500">
                       <BsPlus className="text-3xl" />
                     </div>
                   </button>
-                <Link
-                  to={`/sanpham/${index}`}
-                  className="w-12 h-12 bg-white flex justify-center items-center text-primary drop-shadow-xl"
-                >
-                  <BsEyeFill />
+                  <Link
+                    to={`/sanpham/${id}`}
+                    className="w-12 h-12 bg-white flex justify-center items-center text-primary drop-shadow-xl"
+                  >
+                    <BsEyeFill />
+                  </Link>
+                </div>
+                <Link to={`/sanpham/${id}`}>
+                  <img src={product?.image?.[0]} alt={product?.name} />
                 </Link>
-              </div>
-              <Link to={`/sanpham/${index}`}>
-                <img src={product?.image?.[0]} alt={product?.name} />
-              </Link>
-              <h3 className="all-hover-name-product ">{product?.name}</h3>
-              <p className="">
-                {formatPrice(product?.options?.[0].info?.[0]?.price)}
-              </p>
-            </li>
-          ))}
-        </ul>
+                <h3 className="all-hover-name-product ">{product?.name}</h3>
+                <p className="">
+                  {formatPrice(product?.options?.[0].info?.[0]?.price)}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
