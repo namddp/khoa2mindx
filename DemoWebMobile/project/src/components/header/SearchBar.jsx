@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+
 import "./SearchBar.css";
+
 function SearchBar() {
   const [searchTerm, setSearchTerm] = useState("");
   const [products, setProducts] = useState([]);
@@ -10,7 +11,6 @@ function SearchBar() {
   const handleSearch = (e) => {
     setSearchTerm(e.target.value.toLowerCase());
   };
-
   const formatPrice = (price) => {
     const f = new Intl.NumberFormat("vi-vn", {
       style: "currency",
@@ -22,18 +22,20 @@ function SearchBar() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch('https://63f3daa4864fb1d6001eedae.mockapi.io/api/products', {
-        method: 'GET',
-       headers: {'content-type':'application/json'},
-      })
-      .then(res => {
+    fetch("https://63f3daa4864fb1d6001eedae.mockapi.io/api/products", {
+      method: "GET",
+      headers: { "content-type": "application/json" },
+    })
+      .then((res) => {
         setIsLoading(false);
         if (res.ok) {
           return res.json();
-      }}
-      ).then(it => {setProducts(it)
-  })
-      .catch(error => {
+        }
+      })
+      .then((it) => {
+        setProducts(it);
+      })
+      .catch((error) => {
         setIsLoading(false);
         setError(error);
       });
@@ -71,7 +73,6 @@ function SearchBar() {
                 <h3>
                   <a href={product.url}>{product.name}</a>
                 </h3>
-                {/* <hr/> */}
                 <p>{formatPrice(product?.options?.[0]?.info[0]?.price || 0)}</p>
                 <hr />
               </li>

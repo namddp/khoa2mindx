@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import DailyDeal from "./DailyDeal/DailyDeal";
 import Policy from "./policy/Policy";
 import SlideBanner from "./slidebanner/SlideBanner";
-import ListIpads from "../../components-ipad/list-ipad";
+import ListItems from "../ipad/list-ipad";
 const Home = (props) => {
   const {
     products,
@@ -46,7 +46,7 @@ const Home = (props) => {
         handleSelectCheck={handleSelectCheck}
         handleSelectLove={handleSelectLove}
       />
-      <ListIpads />
+      <ListItems/>
     </div>
   );
 };
